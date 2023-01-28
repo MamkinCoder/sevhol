@@ -7,7 +7,7 @@
      <title>СевХолСервис</title>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Montserrat+Alternates:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="css/style.css">
      <link rel="stylesheet" type="text/css" href="css/callme.css">
      <link rel="stylesheet" type="text/css" href="css/aurora-gradient.css">
@@ -90,14 +90,7 @@
                <img class="img-fluid low-shadow" width="100%" src="img/invisible.svg" alt="">
           </div>
      </div>
-     <div class="bg-light">
-               <div class="aurora-gradient">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-               </div>
-          <nav data-aos="fade-in" data-aos-offset="800" class="navbar navbar-expand sticky-top bg-dark navbar-dark">
+               <nav data-aos="fade-in" data-aos-offset="800" class="navbar navbar-expand sticky-top bg-dark navbar-dark">
                <div class="container">
                     <a href="/" class="d-flex align-items-center navbar-brand">
                          <img src="img/logo.svg" class="icon me-2" alt="logo"/>
@@ -112,22 +105,29 @@
                     </ul>
                </div>
           </nav>
+          <div class="bg-dark relative-container hide-overflow">
+          <div class="aurora-gradient">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+               </div>
           <section class="p-5">
-               <div class="card opacity-75 text-light mb-4 bg-dark rounded-4">
+               <div class="card text-bg-dark opacity-75 mb-4 rounded-4">
                     <div class="row p-5">
                          <div class="col-md-9">
-                              <h1 class="display-5 fw-bold text-light">О нас</h1>
-                              <p class="fs-4">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас все необходимые для ремонта инструменты и запчасти. Работаем в Севастополе, Симферополе, Ялте, Евпатории и пригородах.</p>
+                              <h1 class="display-5 fw-bold">О нас</h1>
+                              <p class="fs-4">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас все необходимые для ремонта инструменты и запчасти. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
                          </div>
                          <div class="col"><img src="img/workers.png" class="img-fluid" alt="работяги"></div>
                     </div>
                </div>
           </section>
-          <section class="p-5">
-               <div class="row row-cols-1 row-cols-md-3 g-3">
+          <section class="px-5">
+               <div class="row row-cols-1 row-cols-md-3 g-3 align-content-center">
                     <div class="col">
-                         <div class="card">
-                              <h4 class="card-header text-center p-3">
+                         <div class="card opacity-75 text-bg-dark">
+                              <h4 class="card-header text-center p-3 border-light">
                                    <svg class="icon me-2" width="30" height="30">
                                         <use xlink:href="#wrench"></use>
                                    </svg>Детали от поставщика
@@ -141,8 +141,8 @@
                          </div>
                     </div>
                     <div class="col">
-                         <div class="card">
-                              <h4 class="card-header text-center p-3"><svg class="icon me-2" width="30" height="30"><use xlink:href="#clock"></use></svg>Ремонт в тот же день</h4>
+                         <div class="card opacity-75 text-bg-dark">
+                              <h4 class="card-header bg-transparent border-light text-center p-3"><svg class="icon me-2" width="30" height="30"><use xlink:href="#clock"></use></svg>Ремонт в тот же день</h4>
                               <div class="card-body">
                                    <ul class="list-group list-group-flush">
                                         <li class="list-group-item">В большинстве случаев мастер приедет в день обращения</li>
@@ -153,12 +153,12 @@
                          </div>
                     </div>
                     <div class="col">
-                         <div class="card">
-                              <h4 class="card-header text-center p-3"><svg class="icon me-2" width="30" height="30"><use xlink:href="#shield"></use></svg>Бесплатная диагностика и гарантия</h4>
+                         <div class="card opacity-75 text-bg-dark">
+                              <h4 class="card-header text-center p-3 border-light"><svg class="icon me-2" width="30" height="30"><use xlink:href="#shield"></use></svg>Бесплатная диагностика и гарантия</h4>
                               <div class="card-body">
-                                   <ul class="list-group list-group-flush">
+                                   <ul class="list-group list-group-flush rounded-4">
                                         <li class="list-group-item">Если вы согласны на ремонт, то диагностика мастера для вас бесплатна</li>
-                                        <li class="list-group-item">Гарантия на запчасти до полугода </li>
+                                        <li class="list-group-item">Гарантия на запчасти <strong>до полугода</strong> </li>
                                    </ul>
                               </div>
                          </div>
@@ -207,6 +207,7 @@
                     </div>
                </div>
           </section>
+     </div>
      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
                <div class="modal-content">
@@ -267,7 +268,6 @@
                     </div>
                </div>
           </div>
-     </div>
      <div class="container">
           <footer class="d-flex flex-sm-row justify-content-between align-items-center py-3 my-4 border-top">
                <div class="d-flex align-items-center">

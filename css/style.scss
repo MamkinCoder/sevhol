@@ -3,9 +3,9 @@ $theme-colors: (
   "secondary":  #272727,
   "light": #f4ffff,
   "dark": #160c28,
-  // "success":    $success,
+  "success":    #34e8ff,
   "info":       #e8bad7,
-  // "warning":    $warning,
+  "warning":    #78c0e0,
   // "danger":     $danger,
 
 );
@@ -27,14 +27,20 @@ $position-values: (
 $form-check-input-checked-color: map-get($theme-colors, "light");
 $form-check-input-checked-bg-color: map-get($theme-colors, "secondary");
 
-// $list-group-bg: #c2c2c2;
+$list-group-bg: map-get($theme-colors, "dark");
 
-$card-bg: #c2c2c2;
+$list-group-border-color:           rgba(white, .250);
+
+// $card-bg: map-get($theme-colors, "primary");
 
 $modal-content-bg: map-get($theme-colors, "light");
 // $modal-content-color:  map-get($theme-colors, "secondary");
 
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Jura', sans-serif;
+  -webkit-text-stroke: 0.03em map-get($theme-colors, "light");
+}
 
 
 // $enable-shadows: true;
@@ -45,7 +51,7 @@ $modal-content-bg: map-get($theme-colors, "light");
 
 .navbar-icon + span {
   font-size: 2em;
-  -webkit-text-stroke: 1.3px map-get($theme-colors, "dark");;
+  -webkit-text-stroke: 0.03em map-get($theme-colors, "dark");
 }
 
 
@@ -57,7 +63,17 @@ $modal-content-bg: map-get($theme-colors, "light");
 .card .icon{
     height: 1.5em;
     width: 1.5em;
-    fill: map-get($theme-colors, "dark");
+    fill: map-get($theme-colors, "light");
+}
+
+
+.card-body li{
+  color: map-get($theme-colors, "light");
+}
+
+.card-header {
+  // background-color: darken(map-get($theme-colors, "primary"), 100%);
+  background-color: white;
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -65,9 +81,9 @@ $modal-content-bg: map-get($theme-colors, "light");
 
 body {
     background-color: map-get($theme-colors, "dark");
-    color: map-get($theme-colors, "dark");
+    // color: map-get($theme-colors, "dark");
     // font-family: 'Russo One', sans-serif;
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
     // font-weight: 100;
 }
 
@@ -119,10 +135,6 @@ footer .icon:hover {
     z-index: 0;
 }
 
-.card-header {
-  font-family: 'Russo One', sans-serif;
-  color: map-get($theme-colors, "dark");
-}
 .quet {
   display: block;
   line-height: 1.2;
