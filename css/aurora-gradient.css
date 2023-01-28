@@ -1,0 +1,74 @@
+.aurora-gradient {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: hidden;
+/*  animation: rotate 10s infinite alternate;*/
+}
+
+@keyframes rotate {
+  100%{
+    transform: rotate(180deg);
+  }
+}
+
+
+.aurora-gradient div {
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  animation: flow 5s infinite alternate;
+}
+
+@keyframes flow {
+  100%{
+    transform: scale(1.2) rotate(40deg) linear;
+  }
+}
+
+.aurora-gradient div:nth-child(4){
+  width: 50%;
+  height: 100%;
+  top: -10%;
+  left: 70%;
+  background-color: #e8bad7;
+  animation-delay: 2s;
+}
+
+.aurora-gradient div:nth-child(2){
+  width: 50%;
+  height: 100%;
+  left: 20%;
+  top: -10%;
+  background-color: #34e8ff;
+  animation-delay: 5s;
+}
+
+.aurora-gradient div:nth-child(3){
+  width: 50%;
+  height: 120%;
+  top: -20%;
+  left: -30%;
+  background-color: #262CA4;
+  animation-delay: 1s;
+}
+
+.aurora-gradient div:nth-child(1){
+  width: 200%;
+  height: 100%;
+  top: 70%;
+  left: -20%;
+  background-color: #efecca;
+}
+
+.aurora-gradient:after{
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px);
+}
+
+
+

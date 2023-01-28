@@ -1,0 +1,155 @@
+$coin-diameter: 100px;
+$coin-thickness: 20px;
+$coin-color: #fff;
+// dime
+// $coin-front: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dime_Obverse_13.png/440px-Dime_Obverse_13.png";
+// $coin-back: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Dime_Reverse_13.png/440px-Dime_Reverse_13.png";
+// penny
+$coin-front: "../img/callme.png";
+$coin-back: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/US_One_Cent_Rev.png/440px-US_One_Cent_Rev.png";
+$edge-faces: 80;
+$edge-face-length: 3.14*$coin-diameter/$edge-faces;
+$turn-time: 3s;
+
+.box {
+  width: $coin-diameter;
+  height: $coin-diameter;
+}
+
+.coin {
+  width: $coin-diameter;
+  height: $coin-diameter;
+  transform-style: preserve-3d;
+  animation: rotate3d $turn-time ease-in-out alternate infinite;
+  transition: all .3s;
+  z-index: 1;
+}
+
+.coin_front{
+  position: absolute;
+  width: $coin-diameter;
+  height: $coin-diameter;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: $coin-color;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: -$coin-diameter/2;
+    bottom: 100%;
+    display: block;
+    height: $coin-diameter/1.5;
+    width: $coin-diameter*2;
+    background: #fff;
+    opacity: 0.3;
+    animation: shine linear $turn-time alternate infinite;
+  }
+}
+
+.coin_front {
+  background-image: url($coin-front);
+  background-color: white;
+  background-size: cover;
+  transform: rotateX(-18deg) rotateY(26deg) rotateZ(-1deg);
+}
+// .coin_back {
+//   background-image: url($coin-back);
+//   background-size: cover;
+//   transform: translateZ(-$coin-thickness/2) rotateX(-18deg) rotateY(180deg) rotateY(26deg) rotateZ(-8.1deg);
+// }
+
+.coin_edge {
+  @for $i from 1 through $edge-faces {
+    div:nth-child(#{$i}) {
+      position: absolute;
+      left: 45px;
+      height: $edge-face-length;
+      width: $coin-thickness;
+      background: darken( $coin-color, ( ($i - $edge-faces/2) * ($i - $edge-faces/2)) / ($edge-faces*$edge-faces/4) * 100 * 0.7 );
+      transform:
+        rotateX(-18deg)
+        rotateY(26deg)
+        rotateZ(-1deg)
+        translateY(#{$coin-diameter/2-$edge-face-length/2 - 2})
+        translateX(#{$coin-diameter/2-$coin-thickness/2-52})
+        rotateZ(360deg/$edge-faces*$i+90)
+        translateX(#{($coin-diameter - 1)/2})
+        rotateY(90deg);
+    }
+  }
+}
+
+.coin_shadow {
+  position: absolute;
+  width: $coin-diameter;
+  height: $coin-thickness;
+  border-radius: 50%;
+  background: #000;
+  box-shadow: 0 0 $coin-thickness*1 $coin-thickness*2 #000;
+  opacity: 0.4;
+  transform: rotateX(50deg) rotateX(-29deg) rotateY(20deg) translateY(-70px) translateZ(-$coin-diameter*1.1) scale(.5);
+  animation: rotateShadow $turn-time ease-in-out alternate infinite;
+  z-index: -1;
+
+}
+
+@keyframes rotate3d {
+  0% {
+    transform: perspective(1000px) rotate3d(0.1, 0.8, -0.3, 20deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotate3d(0.1, 0.8, -0.3, -30deg);
+  }
+}
+
+@keyframes rotateShadow {
+  0% {
+    transform: rotateX(50deg) rotateX(-29deg) rotateY(20deg) translateY(-70px) translateZ(-$coin-diameter*1.1) scale(.5)
+  }
+
+  100% {
+    transform: rotateX(50deg) rotateX(-29deg) rotateY(20deg) translateY(-70px) translateZ(-$coin-diameter*1.1) scale(.4)
+  }
+}
+
+@keyframes rotate360 {
+  0% {
+    transform: perspective(1000px) rotate3d(0, 0, 1, 0deg);
+  }
+
+  100% {
+    transform: perspective(1000px) rotate3d(0, 0, 1, -360deg);
+  }
+}
+
+@keyframes shine {
+  0%, 15% {
+    transform: translateY($coin-diameter*2) rotate(-40deg);
+  }
+  50% {
+    transform: translateY(-$coin-diameter) rotate(-40deg);
+  }
+}
+
+.link {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  cursor: pointer;
+
+  &:hover .coin{
+    // display: none;
+  }
+
+  &:hover .coin_front {
+    background-image: url("../img/callme_dark.png");
+    // background-color: skyblue;
+    // animation: rotate360 linear $turn-time/2;
+  }
+}
+
