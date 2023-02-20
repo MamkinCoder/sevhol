@@ -1,15 +1,12 @@
 .aurora-gradient {
   width: 100%;
   height: 100%;
-/*  animation: rotate 2s infinite alternate;*/
-}
-
-.hide-overflow {
-  overflow: hidden;
 }
 
 .relative-container {
-  position:relative;
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
 }
 
 
@@ -23,6 +20,16 @@
   position: absolute;
   border-radius: 50%;
   animation: flow 4s infinite alternate ease-in-out;
+  z-index: -1;
+}
+
+@media (prefers-reduced-motion) {
+  .aurora-gradient > div:nth-child(-n+4) {
+  position: absolute;
+  border-radius: 50%;
+  animation: none;
+  z-index: -1;
+}
 }
 
 @keyframes flow {

@@ -7,11 +7,14 @@
      <title>СевХолСервис</title>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Montserrat+Alternates:wght@500&family=Ubuntu&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Montserrat+Alternates:wght@500;700;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="css/style.css">
      <link rel="stylesheet" type="text/css" href="css/callme.css">
      <link rel="stylesheet" type="text/css" href="css/aurora-gradient.css">
-     <link rel="icon" href="img/logo.svg">
+     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+     <link rel="manifest" href="/site.webmanifest">
      <script src="node_modules/cleave.js/dist/cleave.min.js"></script>
      <script src="node_modules/cleave.js/dist/addons/cleave-phone.ru.js"></script>
      <link rel="stylesheet" href="node_modules/aos/dist/aos.css" />
@@ -45,11 +48,11 @@
                <path fill-rule="evenodd" d="M8 14.933a.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067v13.866zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
           </symbol>
      </svg>
-          <div class="bg-secondary" style="background: url(img/banner.jpg);
+          <div class="" style="background: url(img/banner.jpg), url(img/banner-r.jpg);
           background-attachment: fixed;
-          background-position: top 0px right 50%;
-          background-repeat: no-repeat;
-          background-size: 100%;
+          background-repeat: no-repeat, repeat;;
+          background-position: top 0% right 80%;
+          background-size: contain;
           ">
           <nav class="navbar navbar-expand sticky-bottom navbar-light">
                <div class="container align-items-start">
@@ -87,7 +90,11 @@
                     </a>
                </div>
                <img class="position-absolute bottom-0 end-0" width="20%" src="img/call.png" alt="">
-               <img class="img-fluid low-shadow" width="100%" src="img/invisible.svg" alt="">
+               <div class="d-none d-xl-block min-vh-75"></div>
+               <div class="d-none d-lg-block d-xl-none min-vh-75"></div>
+               <div class="d-none d-md-block d-lg-none min-vh-70"></div>
+               <div class="d-none d-sm-block d-md-none min-vh-40"></div>
+               <div class="d-block d-sm-none min-vh-30"></div>
           </div>
      </div>
                <nav data-aos="fade-in" data-aos-offset="800" class="navbar navbar-expand sticky-top bg-dark navbar-dark">
@@ -105,35 +112,41 @@
                     </ul>
                </div>
           </nav>
-          <div class="bg-dark relative-container hide-overflow">
+          <div class="bg-dark relative-container">
           <div class="aurora-gradient">
                     <div></div>
                     <div></div>
                     <div></div>
                     <div></div>
                </div>
-          <section class="p-5">
-               <div class="card text-bg-dark opacity-75 mb-4 rounded-4">
-                    <div class="row p-5">
-                         <div class="col-md-9">
-                              <h1 class="display-5 fw-bold">О нас</h1>
-                              <p class="fs-4">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас все необходимые для ремонта инструменты и запчасти. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
+          <section class="container my-3">
+                    <div class="row g-0">
+                         <div class="col-xl-4 col-lg-6 p-3 text-bg-dark opacity-75 d-flex align-items-center rounded-start">
+                              <div>
+                              <h1 class="display-4 fw-bold">О нас</h1>
+                              <p class="fs-4">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
                          </div>
-                         <div class="col"><img src="img/workers.png" class="img-fluid" alt="работяги"></div>
+                         </div>
+                         <div class="col-xl col-lg">
+                              <div class="position-relative">
+                              <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded-end" alt="работяги">
+                              <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
+                              <img src="img/invisible.png" class="img-fluid" alt="работяги">
+                              </div>
+                         </div>
                     </div>
-               </div>
           </section>
-          <section class="px-5">
-               <div class="row row-cols-1 row-cols-md-3 g-3 align-content-center">
+          <section class="container my-3">
+               <div class="row row-cols-1 row-cols-lg-3 g-3 align-content-center">
                     <div class="col">
-                         <div class="card opacity-75 text-bg-dark">
-                              <h4 class="card-header text-center p-3 border-light">
+                         <div class="card opacity-75 text-light">
+                              <h3 class="card-header bg-dark text-center p-3 border-light">
                                    <svg class="icon me-2" width="30" height="30">
                                         <use xlink:href="#wrench"></use>
                                    </svg>Детали от поставщика
-                              </h4>
+                              </h3>
                               <div class="card-body">
-                                   <ul class="list-group list-group-flush">
+                                   <ul class="list-group list-group-flush fs-5">
                                         <li class="list-group-item">У нас всегда есть  оригинальные запчасти в наличии и под заказ</li>
                                         <li class="list-group-item">Всегда выбираем лучший для вас вариант - ремонт старой детали или замену на новую</li>
                                    </ul>
@@ -141,10 +154,10 @@
                          </div>
                     </div>
                     <div class="col">
-                         <div class="card opacity-75 text-bg-dark">
-                              <h4 class="card-header bg-transparent border-light text-center p-3"><svg class="icon me-2" width="30" height="30"><use xlink:href="#clock"></use></svg>Ремонт в тот же день</h4>
+                         <div class="card opacity-75 text-light">
+                              <h3 class="card-header bg-dark border-light text-center p-3"><svg class="icon me-2" width="30" height="30"><use xlink:href="#clock"></use></svg>Ремонт в тот же день</h3>
                               <div class="card-body">
-                                   <ul class="list-group list-group-flush">
+                                   <ul class="list-group list-group-flush fs-5">
                                         <li class="list-group-item">В большинстве случаев мастер приедет в день обращения</li>
                                         <li class="list-group-item">По нашей статистике, чаще всего ремонт производится после одного посещения мастера, все необходимые запчасти у него с собой</li>
                                         <li class="list-group-item">Мы <strong>всегда</strong> доводим ремонт до конца</li>
@@ -153,10 +166,10 @@
                          </div>
                     </div>
                     <div class="col">
-                         <div class="card opacity-75 text-bg-dark">
-                              <h4 class="card-header text-center p-3 border-light"><svg class="icon me-2" width="30" height="30"><use xlink:href="#shield"></use></svg>Бесплатная диагностика и гарантия</h4>
+                         <div class="card opacity-75 text-light">
+                              <h3 class="card-header bg-dark text-center p-3 border-light"><svg class="icon me-2" width="30" height="30"><use xlink:href="#shield"></use></svg>Бесплатная диагностика и гарантия</h3>
                               <div class="card-body">
-                                   <ul class="list-group list-group-flush rounded-4">
+                                   <ul class="list-group list-group-flush fs-5">
                                         <li class="list-group-item">Если вы согласны на ремонт, то диагностика мастера для вас бесплатна</li>
                                         <li class="list-group-item">Гарантия на запчасти <strong>до полугода</strong> </li>
                                    </ul>
@@ -165,49 +178,31 @@
                     </div>
                </div>
           </section>
-          <section class="p-5">
-               <div class="row row-cols-1 row-cols-md-3 g-3">
-                    <div class="col">
-                         <div class="card">
-                              <h4 class="card-header text-center p-3">
-                                   <svg class="icon me-2" width="30" height="30">
-                                        <use xlink:href="#wrench"></use>
-                                   </svg>Детали от поставщика
-                              </h4>
-                              <div class="card-body">
-                                   <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">У нас всегда есть  оригинальные запчасти в наличии и под заказ</li>
-                                        <li class="list-group-item">Всегда выбираем лучший для вас вариант - ремонт старой детали или замену на новую</li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="col">
-                         <div class="card">
-                              <h4 class="card-header text-center p-3"><svg class="icon me-2" width="30" height="30"><use xlink:href="#clock"></use></svg>Ремонт в тот же день</h4>
-                              <div class="card-body">
-                                   <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">В большинстве случаев мастер приедет в день обращения</li>
-                                        <li class="list-group-item">По нашей статистике, чаще всего ремонт производится после одного посещения мастера, все необходимые запчасти у него с собой</li>
-                                        <li class="list-group-item">Мы <strong>всегда</strong> доводим ремонт до конца</li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="col">
-                         <div class="card">
-                              <h4 class="card-header text-center p-3"><svg class="icon me-2" width="30" height="30"><use xlink:href="#shield"></use></svg>Бесплатная диагностика и гарантия</h4>
-                              <div class="card-body">
-                                   <ul class="list-group list-group-flush">
-                                        <li class="list-group-item">Если вы согласны на ремонт, то диагностика мастера для вас бесплатна</li>
-                                        <li class="list-group-item">Гарантия на запчасти до полугода </li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </section>
+          <section class="container my-3" style="position: relative;">
+          <div class="text-light rounded bg-tranclucent">
+            <div class="row g-0">
+               <div class="col-lg-4 order-lg-2 bg-dark opacity-75 rounded justify-content-center d-flex align-items-center p-3">
+                <h1 class="text-center">Мы ремонтируем <em>почти</em> все марки холодильников, вот некоторые из них</h1>
+              </div>
+              <div class="col order-lg-1">
+                              <div class="container pb-5">
+                                <div class="row row-cols-3 text-center">
+                                  <div class="col"><img src="img/logos-01.png" alt="" class="img-fluid"><small class="opacity-25">Ariston (Аристон)</small></div>
+                                  <div class="col"><img src="img/logos-02.png" alt="" class="img-fluid"><small class="opacity-25">Samsung (Самсунг)</small></div>
+                                  <div class="col"><img src="img/logos-03.png" alt="" class="img-fluid"><small class="opacity-25">Bosch (Бош)</small></div>
+                                  <div class="col"><img src="img/logos-04.png" alt="" class="img-fluid"><small class="opacity-25">Beko (Беко)</small></div>
+                                  <div class="col"><img src="img/logos-05.png" alt="" class="img-fluid"><small class="opacity-25">LG (ЭлДжи)</small></div>
+                                  <div class="col"><img src="img/logos-07.png" alt="" class="img-fluid"><small class="opacity-25">Whirlpool (Вирпул)</small></div>
+                                  <div class="col"><img src="img/logos-06.png" alt="" class="img-fluid"><small class="opacity-25">Stinol (Стинол)</small></div>
+                                  <div class="col"><img src="img/logos-08.png" alt="" class="img-fluid"><small class="opacity-25">Бирюса</small></div>
+                                  <div class="col"><img src="img/logos-09.png" alt="" class="img-fluid"><small class="opacity-25">Indesit (Индезит)</small></div>
+                                </div>
+                          </div>
+              </div>
+            </div>
+          </div>
      </div>
+     </section>
      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
                <div class="modal-content">
