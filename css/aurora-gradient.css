@@ -19,7 +19,7 @@
 .aurora-gradient > div:nth-child(-n+4) {
   position: absolute;
   border-radius: 50%;
-  animation: flow 4s infinite alternate ease-in-out;
+  animation: flow 6s infinite alternate ease-in-out;
   z-index: -1;
 }
 
@@ -41,7 +41,7 @@
   }
 }
 
-.aurora-gradient > div:nth-child(4){
+.relative-container .aurora-gradient > div:nth-child(4){
   width: 50%;
   height: 100%;
   top: -10%;
@@ -50,7 +50,7 @@
   animation-delay: 2s;
 }
 
-.aurora-gradient > div:nth-child(2){
+.relative-container .aurora-gradient > div:nth-child(2){
   width: 70%;
   height: 100%;
   left: 20%;
@@ -59,7 +59,7 @@
   animation-delay: 5s;
 }
 
-.aurora-gradient > div:nth-child(3){
+.relative-container .aurora-gradient > div:nth-child(3){
   width: 40%;
   height: 120%;
   top: -20%;
@@ -68,7 +68,7 @@
 /*  animation-delay: 1s;*/
 }
 
-.aurora-gradient > div:nth-child(1){
+.relative-container .aurora-gradient > div:nth-child(1){
   width: 200%;
   height: 100%;
   top: 60%;
@@ -82,8 +82,9 @@
   height: 100%;
   width: 100%;
   backdrop-filter: blur(80px);
-  -webkit-backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(80px);
 }
+
 
 
 

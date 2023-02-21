@@ -76,6 +76,8 @@
                     <div class="d-none d-sm-block d-md-none min-vh-40"></div>
                     <div class="d-block d-sm-none min-vh-25"></div>
                </div>
+               <div class="">
+                    <div class="bgblur"></div>
                <nav data-aos="fade-in" data-aos-offset="800" class="navbar navbar-expand sticky-top bg-light navbar-light">
                     <div class="container">
                          <a href="/" class="d-flex align-items-center navbar-brand">
@@ -91,6 +93,7 @@
                          </ul>
                     </div>
                </nav>
+               </div>
                <div class="relative-container">
                     <div class="aurora-gradient">
                          <div></div>
@@ -126,7 +129,7 @@
                          <div class="row row-cols-1 row-cols-lg-3 g-3 align-content-center">
                               <div class="col">
                                    <div class="card border-0 text-dark">
-                                        <h3 class="card-header bg-light text-center p-3 border-dark">
+                                        <h3 class="card-header text-center p-3 border-dark">
                                         <svg class="icon me-2" width="30" height="30">
                                              <use xlink:href="#wrench"></use>
                                         </svg>Детали от поставщика
@@ -141,7 +144,7 @@
                               </div>
                               <div class="col">
                                    <div class="card border-0 text-dark">
-                                   <h3 class="card-header bg-light border-dark text-center p-3"><svg class="icon me-2" width="30" height="30"><use xlink:href="#clock"></use></svg>Ремонт в тот же день</h3>
+                                   <h3 class="card-header border-dark text-center p-3"><svg class="icon me-2" width="30" height="30"><use xlink:href="#clock"></use></svg>Ремонт в тот же день</h3>
                                    <div class="card-body">
                                         <ul class="list-group list-group-flush fs-5">
                                              <li class="list-group-item">В большинстве случаев мастер приедет в день обращения</li>
@@ -153,7 +156,7 @@
                          </div>
                          <div class="col">
                               <div class="card border-0 text-dark">
-                              <h3 class="card-header bg-light text-center p-3 border-dark"><svg class="icon me-2" width="30" height="30"><use xlink:href="#shield"></use></svg>Бесплатная диагностика и гарантия</h3>
+                              <h3 class="card-header text-center p-3 border-dark"><svg class="icon me-2" width="30" height="30"><use xlink:href="#shield"></use></svg>Бесплатная диагностика и гарантия</h3>
                               <div class="card-body">
                                    <ul class="list-group list-group-flush fs-5">
                                         <li class="list-group-item">Если вы согласны на ремонт, то диагностика мастера для вас бесплатна</li>
