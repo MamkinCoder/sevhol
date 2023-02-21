@@ -60,6 +60,7 @@
                               <img src="img/logo.svg" class="navbar-icon me-2" alt="logo"/>
                               <span class="lh-1">СевХол<br>Сервис</span>
                          </a>
+
                          <ul class="navbar-nav">
                               <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
                               <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
@@ -76,8 +77,6 @@
                     <div class="d-none d-sm-block d-md-none min-vh-40"></div>
                     <div class="d-block d-sm-none min-vh-25"></div>
                </div>
-               <div class="">
-                    <div class="bgblur"></div>
                <nav data-aos="fade-in" data-aos-offset="800" class="navbar navbar-expand sticky-top bg-light navbar-light">
                     <div class="container">
                          <a href="/" class="d-flex align-items-center navbar-brand">
@@ -93,14 +92,14 @@
                          </ul>
                     </div>
                </nav>
-               </div>
                <div class="relative-container">
-                    <div class="aurora-gradient">
+<!--                     <div class="aurora-gradient">
                          <div></div>
                          <div></div>
                          <div></div>
                          <div></div>
-                    </div>
+                    </div> -->
+                    <div class="bgblur"></div>
                     <section class="container my-3">
                          <div class="row g-0">
                               <div class="col-xl col-lg p-3 card border-0 text-dark align-items-center rounded-start">
