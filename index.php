@@ -66,7 +66,7 @@
                background-repeat: no-repeat, repeat;;
                background-position: top 0% right 80%;
                background-size: contain;">
-               <nav class="navbar navbar-expand navbar-light">
+               <nav class="position-absolute m-2 navbar navbar-expand navbar-light">
                     <div class="container align-items-start">
                          <div class="d-flex align-items-center">
                               <a class="d-flex navbar-brand align-items-center opacity-75" href="#">
@@ -77,40 +77,10 @@
                                    <a class="link-primary" href="tel:+79785046000">+7 (978) 504-60-00</a> <br>
                                    <div class="marquee">
                                         <div>
-                                             <svg class="icon">
-                                                  <use xlink:href="#geo"></use>
-                                             </svg>
-                                             Севастополь
-                                             <svg class="icon">
-                                                  <use xlink:href="#geo"></use>
-                                             </svg>
-                                             Евпатория
-                                             <svg class="icon">
-                                                  <use xlink:href="#geo"></use>
-                                             </svg>
-                                             Симферополь
-                                             <svg class="icon">
-                                                  <use xlink:href="#geo"></use>
-                                             </svg>
-                                             Ялта&nbsp;
+                                             <svg class="icon"><use xlink:href="#geo"></use></svg>Севастополь<svg class="icon"><use xlink:href="#geo"></use></svg>Евпатория<svg class="icon"><use xlink:href="#geo"></use></svg>Симферополь<svg class="icon"><use xlink:href="#geo"></use></svg>Ялта&nbsp;
                                         </div>
                                         <div>
-                                             <svg class="icon">
-                                                  <use xlink:href="#geo"></use>
-                                             </svg>
-                                             Севастополь
-                                             <svg class="icon">
-                                                  <use xlink:href="#geo"></use>
-                                             </svg>
-                                             Евпатория
-                                             <svg class="icon">
-                                                  <use xlink:href="#geo"></use>
-                                             </svg>
-                                             Симферополь
-                                             <svg class="icon">
-                                                  <use xlink:href="#geo"></use>
-                                             </svg>
-                                             Ялта&nbsp;
+                                             <svg class="icon"><use xlink:href="#geo"></use></svg>Севастополь<svg class="icon"><use xlink:href="#geo"></use></svg>Евпатория<svg class="icon"><use xlink:href="#geo"></use></svg>Симферополь<svg class="icon"><use xlink:href="#geo"></use></svg>Ялта&nbsp;
                                         </div>
                                         <a class="invisible" href="tel:+79785046000">+7 (978) 504-60-00</a>
                                    </div>
@@ -125,11 +95,13 @@
                          </ul> -->
                     </div>
                </nav>
-               <div class="d-none d-xl-block min-vh-75"></div>
-               <div class="d-none d-lg-block d-xl-none min-vh-75"></div>
-               <div class="d-none d-md-block d-lg-none min-vh-70"></div>
+                         <!-- <img src="img/banner.jpg" class="img-fluid" alt=""> -->
+               <!-- <div class="d-none d-xl-block min-vh-75"></div>
+               <div class="d-none d-lg-block d-xl-none min-vh-70"></div>
+               <div class="d-none d-md-block d-lg-none min-vh-45"></div>
                <div class="d-none d-sm-block d-md-none min-vh-40"></div>
-               <div class="d-block d-sm-none min-vh-25"></div>
+               <div class="d-block d-sm-none min-vh-25"></div> -->
+               <img src="img/banner.jpg" class="invisible" alt="" style="max-height: 80vh; max-width: 100vw;">
                <nav data-aos="fade-in" data-aos-offset="600" class="navbar navbar-expand sticky-top bg-light navbar-light">
                     <div class="container">
                          <a href="/" class="d-flex align-items-center navbar-brand">
