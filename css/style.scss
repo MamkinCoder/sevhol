@@ -1,7 +1,7 @@
 $theme-colors: (
   "primary": #2660a4,
   "secondary":  #272727,
-  "light": #f4ffff,
+  "light": #F9FDEB,
   "dark": #160c28,
   "success":    #34e8ff,
   "info":       #e8bad7,
@@ -32,9 +32,9 @@ $form-check-input-checked-bg-color: map-get($theme-colors, "secondary");
 
 $list-group-bg: rgba(map-get($theme-colors, "dark"), 0.0);
 
-$list-group-border-color:           rgba(white, .250);
+$list-group-border-color:           rgba(black, .250);
 
-$card-bg: rgba(map-get($theme-colors, "dark"), 0.75);
+$card-bg: rgba(map-get($theme-colors, "light"), 0.4);
 
 $modal-content-bg: map-get($theme-colors, "light");
 // $modal-content-color:  map-get($theme-colors, "secondary");
@@ -44,13 +44,13 @@ $utilities:
        "min-viewport-height": (
       property: min-height,
       class: min-vh,
-      values: (100: 100vh, 90: 90vh, 80: 80vh, 75: 75vh, 70: 70vh, 65: 65vh, 60: 60vh, 50: 50vh, 45: 45vh, 40: 40vh, 30: 30vh, 20: 20vh)
+      values: (100: 100vh, 90: 90vh, 80: 80vh, 75: 75vh, 70: 70vh, 65: 65vh, 60: 60vh, 50: 50vh, 45: 45vh, 40: 40vh, 30: 30vh, 25: 25vh, 20: 20vh)
     ),
 );
 
 
 .bg-tranclucent {
-  background-color: rgba(map-get($theme-colors, "dark"), 0.5);
+  background-color: rgba(map-get($theme-colors, "light"), 0.5);
 }
 
 // $enable-shadows: true;
@@ -73,12 +73,12 @@ $utilities:
 .card .icon{
     height: 1.5em;
     width: 1.5em;
-    fill: map-get($theme-colors, "light");
+    fill: map-get($theme-colors, "dark");
 }
 
 
 .card-body li{
-  color: map-get($theme-colors, "light");
+  color: map-get($theme-colors, "dark");
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background-color: map-get($theme-colors, "dark");
+    background-color: map-get($theme-colors, "light");
     // color: map-get($theme-colors, "dark");
     // font-family: 'Russo One', sans-serif;
     font-family: 'Ubuntu', sans-serif;
