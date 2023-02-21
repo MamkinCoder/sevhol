@@ -47,6 +47,9 @@
                <symbol id="shield" viewBox="0 0 16 16">
                <path fill-rule="evenodd" d="M8 14.933a.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067v13.866zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
                </symbol>
+               <symbol id="geo" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+               <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+               </symbol>
           </svg>
           <div class="" style="background: url(img/banner.jpg), url(img/banner-r.jpg);
                background-attachment: fixed;
@@ -56,18 +59,26 @@
                ">
                <nav class="navbar navbar-expand navbar-light">
                     <div class="container align-items-start">
-                         <a class="d-flex navbar-brand align-items-center opacity-75" href="#">
-                              <img src="img/logo.svg" class="navbar-icon me-2" alt="logo"/>
-                              <span class="lh-1">СевХол<br>Сервис</span>
-                         </a>
-
-                         <ul class="navbar-nav">
+                         <div class="d-flex align-items-center">
+                              <a class="d-flex navbar-brand align-items-center opacity-75" href="#">
+                                   <img src="img/logo.svg" class="navbar-icon me-2" alt="logo"/>
+                                   <span class="lh-1">СевХол<br>Сервис</span>
+                              </a>
+                              <div class="navbar-number">
+                                   <a class="link-primary" href="tel:+79785046000">+7 (978) 504-60-00</a> <br>
+                                   <div class="marquee">
+                                        <div><svg class="icon"><use xlink:href="#geo"></use></svg>Севастополь <svg class="icon"><use xlink:href="#geo"></use></svg>Евпатория <svg class="icon"><use xlink:href="#geo"></use></svg>Симферополь <svg class="icon"><use xlink:href="#geo"></use></svg>Ялта&nbsp;</div><div><svg class="icon"><use xlink:href="#geo"></use></svg>Севастополь <svg class="icon"><use xlink:href="#geo"></use></svg>Евпатория <svg class="icon"><use xlink:href="#geo"></use></svg>Симферополь <svg class="icon"><use xlink:href="#geo"></use></svg>Ялта&nbsp;</div>
+                                        <a class="invisible" href="tel:+79785046000">+7 (978) 504-60-00</a>
+                                   </div>
+                              </div>
+                         </div>
+                         <!-- <ul class="navbar-nav">
                               <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
                               <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
                               <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
                               <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
                               <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                         </ul>
+                         </ul> -->
                     </div>
                </nav>
                <div class="position-relative">
@@ -77,7 +88,7 @@
                     <div class="d-none d-sm-block d-md-none min-vh-40"></div>
                     <div class="d-block d-sm-none min-vh-25"></div>
                </div>
-               <nav data-aos="fade-in" data-aos-offset="800" class="navbar navbar-expand sticky-top bg-light navbar-light">
+               <nav data-aos="fade-in" data-aos-offset="600" class="navbar navbar-expand sticky-top bg-light navbar-light">
                     <div class="container">
                          <a href="/" class="d-flex align-items-center navbar-brand">
                               <img src="img/logo.svg" class="icon me-2" alt="logo"/>
@@ -93,7 +104,7 @@
                     </div>
                </nav>
                <div class="relative-container">
-<!--                     <div class="aurora-gradient">
+                    <!--                     <div class="aurora-gradient">
                          <div></div>
                          <div></div>
                          <div></div>

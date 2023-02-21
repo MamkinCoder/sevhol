@@ -64,10 +64,19 @@ $utilities:
   -webkit-text-stroke: 0.03em map-get($theme-colors, "dark");
 }
 
+.navbar-number {
+  font-family: 'Jura', sans-serif;
+  font-size: 2.5vmin;
+}
 
 .icon {
   height: 1.5em;
   width: 1.5em;
+}
+
+.navbar-number .icon {
+  height: 1em;
+  width: 1em;
 }
 
 .card .icon{
@@ -165,5 +174,38 @@ footer .icon:hover {
   width: 100%;
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px);
+}
+
+//marquee
+
+.marquee {
+  white-space: nowrap;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+$dur: 15s;
+
+.marquee div:nth-of-type(2) {
+  position: absolute;
+  display: inline-block;
+  animation: marquee $dur linear infinite;
+}
+
+.marquee div:nth-of-type(1) {
+  position: absolute;
+  display: inline-block;
+  transform: translateX(50%);
+  animation: marquee $dur calc($dur/2) linear infinite;
+}
+
+@keyframes marquee {
+   0% {
+    transform: translateX(50%);
+  }
+  100% {
+    transform: translateX(-150%);
+  }
 }
 
