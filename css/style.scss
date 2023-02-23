@@ -11,6 +11,8 @@ $theme-colors: (
 );
 
 $position-values: (
+  n40: -40%,
+  n30: -30%,
   0: 0,
   5: 5%,
   10: 10%,
@@ -34,7 +36,7 @@ $list-group-bg: rgba(map-get($theme-colors, "dark"), 0.0);
 
 $list-group-border-color:           rgba(black, .250);
 
-$card-bg: rgba(map-get($theme-colors, "light"), 0.4);
+$card-bg: rgba(map-get($theme-colors, "light"), 0.05);
 
 $modal-content-bg: map-get($theme-colors, "light");
 // $modal-content-color:  map-get($theme-colors, "secondary");
@@ -48,10 +50,6 @@ $utilities:
     ),
 );
 
-
-.bg-tranclucent {
-  background-color: rgba(map-get($theme-colors, "light"), 0.5);
-}
 
 // $enable-shadows: true;
 .navbar-icon {
