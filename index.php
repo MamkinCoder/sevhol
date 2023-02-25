@@ -120,7 +120,7 @@
      <div class="relative-container">
           <div class="bgblur"></div>
           <section class="container d-none d-sm-block my-5">
-               <div class="row">
+               <div class="row" id="hanging">
                     <div class="card border-0 text-dark">
                          <div class="card-body">
                                <figure data-aos="fade-left" data-aos-duration="1000" data-aos-anchor="#trigger" data-aos-anchor-placement="bottom-center" class="ms-5 w-50 float-end ">
@@ -167,11 +167,14 @@
                     </div> -->
                </div>
           </section>
-          <section class="container position-relative">
-               <img src="img/t-wrench.png" alt="wrench" class="w-25 end-5 top-n30 position-absolute">
-               <div class="row gy-3">
-                    <div class="col-md-6" data-aos="zoom-in-down">
-                         <div class="card border-0 text-dark">
+          <section class="container position-relative" style="perspective: 300px; overflow: auto;">
+               <div class="" style="position: absolute; transform: translateZ(-300px);">
+                    <img src="img/t-wrench.png" alt="wrench" class="img-fluid">
+               </div>
+               <div class="row gy-3" style="transform: translateZ(0px);">
+                    <div class="col-md-6">
+                         <div class="card bg-transparent text-dark">
+                              <div class="rounded cardblur"></div>
                               <h4 class="card-header text-center">
                               <svg class="icon me-2" width="30" height="30">
                                    <use xlink:href="#wrench"></use>
@@ -186,8 +189,9 @@
                               </div>
                          </div>
                     </div>
-                    <div class="offset-md-3 col-md-7" data-aos="zoom-in-down">
-                         <div class="card border-0 text-dark">
+                    <div class="offset-md-3 col-md-7">
+                         <div class="card bg-transparent text-dark">
+                              <div class="rounded cardblur"></div>
                               <h4 class="card-header text-center">
                               <svg class="icon me-2" width="30" height="30">
                                    <use xlink:href="#clock"></use>
@@ -203,8 +207,9 @@
                               </div>
                          </div>
                     </div>
-                    <div class="offset-md-7 col-md-5" data-aos="zoom-in-down">
-                         <div class="card border-0 text-dark">
+                    <div class="offset-md-7 col-md-5">
+                         <div class="card bg-transparent text-dark">
+                              <div class="rounded cardblur"></div>
                               <h4 class="card-header text-center">
                               <svg class="icon me-2" width="30" height="30">
                                    <use xlink:href="#shield"></use>
