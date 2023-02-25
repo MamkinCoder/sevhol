@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#160c28">
+<title>СевХолСервис</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Montserrat+Alternates:wght@500;700;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/callme.css">
+<link rel="stylesheet" type="text/css" href="css/aurora-gradient.css">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<script src="node_modules/cleave.js/dist/cleave.min.js"></script>
+<script src="node_modules/cleave.js/dist/addons/cleave-phone.ru.js"></script>
+<link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+<script src="node_modules/aos/dist/aos.js"></script>
+<script src="node_modules/canvas-confetti/dist/confetti.browser.js"></script>
+</head>
+<body>
+<div class="parallax_wrapper" style="background: url(img/banner.jpg), url(img/banner-r.jpg);
+     background-attachment: fixed;
+     background-repeat: no-repeat, repeat;;
+     background-position: top 0% right 80%;
+     background-size: contain;">
+     <div class="container">
+     <nav class="m-2 position-absolute navbar navbar-expand navbar-light">
+               <div class="d-flex align-items-center">
+                    <a class="d-flex navbar-brand align-items-center opacity-75" href="#">
+                         <img src="img/logo.svg" class="navbar-icon me-2" alt="logo">
+                         <span class="lh-1">СевХол<br>Сервис</span>
+                    </a>
+                    <div class="navbar-number">
+                         <a class="link-primary" href="tel:+79785046000">+7 (978) 504-60-00</a> <br>
+                         <div class="marquee">
+                              <div>
+                                   <svg class="icon"><use xlink:href="#geo"></use></svg>Севастополь<svg class="icon"><use xlink:href="#geo"></use></svg>Евпатория<svg class="icon"><use xlink:href="#geo"></use></svg>Симферополь<svg class="icon"><use xlink:href="#geo"></use></svg>Ялта&nbsp;
+                              </div>
+                              <div>
+                                   <svg class="icon"><use xlink:href="#geo"></use></svg>Севастополь<svg class="icon"><use xlink:href="#geo"></use></svg>Евпатория<svg class="icon"><use xlink:href="#geo"></use></svg>Симферополь<svg class="icon"><use xlink:href="#geo"></use></svg>Ялта&nbsp;
+                              </div>
+                              <a class="invisible" href="tel:+79785046000">+7 (978) 504-60-00</a>
+                         </div>
+                    </div>
+               </div>
+              <!--  <ul class="navbar-nav">
+                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+               </ul> -->
+     </nav>
+     </div>
+     <img src="img/banner-min.jpg" class="invisible" alt="" style="max-height: 80vh; max-width: 100vw;">
+     <nav id="trigger" data-aos="fade-in" data-aos-anchor="#trigger" data-aos-anchor-placement="top-top" class="navbar navbar-expand sticky-top bg-light navbar-light">
+          <div class="container">
+               <a href="/" class="d-flex align-items-center navbar-brand">
+                    <img src="img/logo.svg" class="icon me-2" alt="logo">
+                    <span class="fs-4">СевХолСервис</span>
+               </a>
+          </div>
+     </nav>
+     <div class="relative-container">
+     <div class="bgblur"></div>
+          <section class="container d-none d-sm-block my-5">
+               <div class="row" id="hanging">
+                    <div class="card border-0 text-dark">
+                         <div class="card-body">
+                               <figure data-aos="fade-left" data-aos-duration="1000" data-aos-anchor="#trigger" data-aos-anchor-placement="bottom-center" class="ms-5 w-50 float-end ">
+                                   <div class="position-relative">
+                                        <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
+                                        <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
+                                        <img src="img/invisible.png" class="img-fluid" alt="работяги">
+                                   </div>
+                              </figure>
+                              <h1 class="display-4 fw-bold">О нас</h1>
+                              <p class="fs-5">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
+                         </div>
+                    </div>
+                    <!-- <div class="col-xl col-lg">
+                         <div class="position-relative">
+                              <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded-end" alt="работяги">
+                              <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
+                              <img src="img/invisible.png" class="img-fluid" alt="работяги">
+                         </div>
+                    </div> -->
+               </div>
+          </section>
+          <section class="d-block d-sm-none">
+               <div class="row g-0">
+                    <div class="col-xl col-lg card border-0 text-dark align-items-center">
+                         <div class="card-body p-0">
+                              <h1 class="display-4 p-2 text-center fw-bold">О нас</h1>
+                              <figure class="w-100 float-end ">
+                                   <div class="position-relative">
+                                        <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
+                                        <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
+                                        <img src="img/invisible.png" class="img-fluid" alt="работяги">
+                                   </div>
+                              </figure>
+                              <p class=" p-2 fs-5">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
+                         </div>
+                    </div>
+                    <!-- <div class="col-xl col-lg">
+                         <div class="position-relative">
+                              <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded-end" alt="работяги">
+                              <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
+                              <img src="img/invisible.png" class="img-fluid" alt="работяги">
+                         </div>
+                    </div> -->
+               </div>
+          </section>
+
+               <div class="parallax-wrench">
+                    <img src="img/t-wrench.png" alt="wrench" class="img-fluid">
+               </div>
+               <div class="row gy-3 parallax-cards">
+                    <div class="col-md-6">
+                         <div class="card bg-transparent text-dark">
+                              <div class="rounded cardblur"></div>
+                              <h4 class="card-header text-center">
+                              <svg class="icon me-2" width="30" height="30">
+                                   <use xlink:href="#wrench"></use>
+                              </svg>
+                              Детали от поставщика
+                              </h4>
+                              <div class="card-body">
+                                   <ul class="list-group list-group-flush fs-6">
+                                        <li class="list-group-item">У нас всегда есть  оригинальные запчасти в наличии и под заказ</li>
+                                        <li class="list-group-item">Всегда выбираем лучший для вас вариант - ремонт старой детали или замену на новую</li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="offset-md-3 col-md-7">
+                         <div class="card bg-transparent text-dark">
+                              <div class="rounded cardblur"></div>
+                              <h4 class="card-header text-center">
+                              <svg class="icon me-2" width="30" height="30">
+                                   <use xlink:href="#clock"></use>
+                              </svg>
+                              Ремонт в тот же день
+                              </h4>
+                              <div class="card-body">
+                                   <ul class="list-group list-group-flush fs-6">
+                                        <li class="list-group-item">В большинстве случаев мастер приедет в день обращения</li>
+                                        <li class="list-group-item">По нашей статистике, чаще всего ремонт производится после одного посещения мастера, все необходимые запчасти у него с собой</li>
+                                        <li class="list-group-item">Мы <strong>всегда</strong> доводим ремонт до конца</li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="offset-md-7 col-md-5">
+                         <div class="card bg-transparent text-dark">
+                              <div class="rounded cardblur"></div>
+                              <h4 class="card-header text-center">
+                              <svg class="icon me-2" width="30" height="30">
+                                   <use xlink:href="#shield"></use>
+                              </svg>
+                              Бесплатная диагностика и гарантия
+                              </h4>
+                              <div class="card-body">
+                                   <ul class="list-group list-group-flush fs-6">
+                                        <li class="list-group-item">Выезд мастера всегда <strong>бесплатный</strong></li>
+                                        <li class="list-group-item">Если вы согласны на ремонт, то диагностика мастера для вас бесплатна</li>
+                                        <li class="list-group-item">Гарантия на запчасти <strong>до полугода</strong> </li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+     </div>
+</div>
+</body>
+</html>

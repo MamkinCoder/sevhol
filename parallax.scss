@@ -1,0 +1,65 @@
+// * {
+//   margin: 0;
+//   padding: 0;
+// }
+
+@mixin align-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  font-size: 4em;
+  color: black;
+
+
+}
+
+.parallax_wrapper {
+  height: 100vh;
+  overflow: auto;
+  perspective: 300px;
+}
+
+.start {
+  height: 100vh;
+  background-color: tomato;
+  @include align-center;
+}
+
+.end{
+  height: 100vh;
+  background-color: teal;
+  @include align-center;
+}
+
+.parallax_group {
+  position: relative;
+  height: 100vh;
+  // transform-style: preserve-3d;
+}
+
+.parallax_layer {
+  position: absolute;
+  inset: 0;
+  @include align-center;
+}
+
+.mid_layer {
+  // background-color: crimson;
+}
+
+.top_layer {
+  transform: translateZ(100px);
+  // background-color: yellowgreen;
+}
+
+.bottom_layer {
+  transform: translateZ(-100px);
+  // background-color: mediumaquamarine;
+}
+
+.parallax_group img {
+
+}

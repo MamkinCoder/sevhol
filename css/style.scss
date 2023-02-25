@@ -160,19 +160,65 @@ footer .icon:hover {
   font-family: 'Jura', sans-serif;
 }
 
-.bgblur{
-  height: 100%;
-  width: 100%;
+
+$translateZ: -10px;
+
+$perspective: 300px;
+
+$scaleZ: calc($perspective / ($perspective + $translateZ));
+
+.parallax_wrapper {
+  height: 100vh;
+  overflow: auto;
+  perspective: $perspective;
 }
 
-.bgblur:after{
+.bgblur {
   position: absolute;
   content: "";
   height: 100%;
   width: 100%;
+  transform-style: flat;
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px);
+  transform: translateZ($translateZ) scale3d($scaleZ, $scaleZ, 1);
 }
+
+.card-header {
+  z-index: 1;
+}
+
+.cardblur {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  transform-style: flat;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.parallax-wrench {
+  transform-style: preserve-3d;
+  position: absolute;
+  transform: translateZ(-5px);
+}
+
+$c-translateZ: 200px;
+
+.parallax-cards {
+  transform-style: preserve-3d;
+  transform: translateZ($c-translateZ);
+}
+
+// .bgblur:after{
+//   position: absolute;
+//   content: "";
+//   height: 100%;
+//   width: 100%;
+//   backdrop-filter: blur(80px);
+//   -webkit-backdrop-filter: blur(80px);
+// }
 
 //marquee
 
