@@ -17,22 +17,10 @@
 <link rel="manifest" href="/site.webmanifest">
 <script src="node_modules/cleave.js/dist/cleave.min.js"></script>
 <script src="node_modules/cleave.js/dist/addons/cleave-phone.ru.js"></script>
-<link rel="stylesheet" href="node_modules/aos/dist/aos.css">
-<script src="node_modules/aos/dist/aos.js"></script>
 <script src="node_modules/canvas-confetti/dist/confetti.browser.js"></script>
 </head>
 <body>
-<!-- <div class="box position-absolute bottom-5 end-20" id="coin">
-     <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="link" id="modal_link">
-          <div class="coin">
-               <div class="coin_front"></div>
-               <div class="coin_edge">
-               </div>
-               <div class="coin_back"></div>
-          </div>
-     </a>
-</div> -->
-<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
      <symbol id="envelope" viewBox="0 0 16 16">
      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
@@ -61,7 +49,7 @@
      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
      </symbol>
 </svg>
-<div class="" style="background: url(img/banner.jpg), url(img/banner-r.jpg);
+<div class="parallax_wrapper" style="background: url(img/banner.jpg), url(img/banner-r.jpg);
      background-attachment: fixed;
      background-repeat: no-repeat, repeat;;
      background-position: top 0% right 80%;
@@ -95,35 +83,25 @@
                </ul> -->
      </nav>
      </div>
-               <!-- <img src="img/banner.jpg" class="img-fluid" alt=""> -->
-     <!-- <div class="d-none d-xl-block min-vh-75"></div>
-     <div class="d-none d-lg-block d-xl-none min-vh-70"></div>
-     <div class="d-none d-md-block d-lg-none min-vh-45"></div>
-     <div class="d-none d-sm-block d-md-none min-vh-40"></div>
-     <div class="d-block d-sm-none min-vh-25"></div> -->
      <img src="img/banner-min.jpg" class="invisible" alt="" style="max-height: 80vh; max-width: 100vw;">
-     <nav id="trigger" data-aos="fade-in" data-aos-anchor="#trigger" data-aos-anchor-placement="top-top" class="navbar navbar-expand sticky-top bg-light navbar-light">
+     <nav id="navbar-aos" class="navbar navbar-expand sticky-top bg-light navbar-light">
           <div class="container">
                <a href="/" class="d-flex align-items-center navbar-brand">
                     <img src="img/logo.svg" class="icon me-2" alt="logo">
                     <span class="fs-4">СевХолСервис</span>
                </a>
-               <!-- <ul class="navbar-nav align-items-start">
-                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-               </ul> -->
           </div>
      </nav>
      <div class="relative-container">
-          <div class="bgblur"></div>
-          <section class="container d-none d-sm-block my-5">
-               <div class="row" id="hanging">
-                    <div class="card border-0 text-dark">
-                         <div class="card-body">
-                               <figure data-aos="fade-left" data-aos-duration="1000" data-aos-anchor="#trigger" data-aos-anchor-placement="bottom-center" class="ms-5 w-50 float-end ">
+          <div class="d-none d-sm-block bgblur"></div>
+          <div class="d-block d-sm-none bgblur-easy"></div>
+          <section class="relative-container container d-none d-sm-block my-5">
+               <div class="rounded cardblur"></div>
+               <div class="row g-0">
+                    <div class="card text-dark">
+                         <div class="card-body p-5">
+                              <!-- TODO AOS -->
+                               <figure id="brothers-aos" class="ms-5 w-50 float-end ">
                                    <div class="position-relative">
                                         <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
                                         <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
@@ -134,19 +112,12 @@
                               <p class="fs-5">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
                          </div>
                     </div>
-                    <!-- <div class="col-xl col-lg">
-                         <div class="position-relative">
-                              <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded-end" alt="работяги">
-                              <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
-                              <img src="img/invisible.png" class="img-fluid" alt="работяги">
-                         </div>
-                    </div> -->
                </div>
           </section>
-          <section class="d-block d-sm-none">
+          <section class="d-block d-sm-none mb-3">
                <div class="row g-0">
-                    <div class="col-xl col-lg card border-0 text-dark align-items-center">
-                         <div class="card-body p-0">
+                    <div class="col-xl col-lg card border-0 align-items-center">
+                         <div class="card-body p-1">
                               <h1 class="display-4 p-2 text-center fw-bold">О нас</h1>
                               <figure class="w-100 float-end ">
                                    <div class="position-relative">
@@ -158,20 +129,19 @@
                               <p class=" p-2 fs-5">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
                          </div>
                     </div>
-                    <!-- <div class="col-xl col-lg">
-                         <div class="position-relative">
-                              <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded-end" alt="работяги">
-                              <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
-                              <img src="img/invisible.png" class="img-fluid" alt="работяги">
-                         </div>
-                    </div> -->
                </div>
           </section>
-          <section class="container position-relative" style="perspective: 300px; overflow: auto;">
-               <div class="" style="position: absolute; transform: translateZ(-300px);">
-                    <img src="img/t-wrench.png" alt="wrench" class="img-fluid">
+          <section class="container position-relative">
+               <div class="parallax-wrench aos d-none d-sm-block">
+                    <img src="img/t-wrench.png" alt="wrench" class="">
                </div>
-               <div class="row gy-3" style="transform: translateZ(0px);">
+               <div class="parallax-clock aos d-none d-sm-block">
+                    <img src="img/t-clock.png" alt="clock" class="">
+               </div>
+               <div class="parallax-shield aos d-none d-sm-block">
+                    <img src="img/t-shield.png" alt="shield" class="">
+               </div>
+               <div class="row gy-3 parallax-cards">
                     <div class="col-md-6">
                          <div class="card bg-transparent text-dark">
                               <div class="rounded cardblur"></div>
@@ -227,33 +197,121 @@
                     </div>
                </div>
           </section>
-          <section class="container my-3" style="position: relative;">
-               <div class="text-light rounded bg-tranclucent">
+          <section class="container my-3 d-none d-sm-block">
+               <div class="text-dark">
                     <div class="row g-0">
-                         <div class="col-lg-4 order-lg-2 bg-dark opacity-75 rounded justify-content-center d-flex align-items-center p-3">
-                              <h1 class="text-center">Мы ремонтируем все марки холодильников, вот некоторые из них</h1>
-                         </div>
-                         <div class="col order-lg-1">
-                              <div class="container pb-5">
-                                   <div class="row row-cols-3 text-center">
-                                        <div class="col"><img src="img/logos-01.png" alt="" class="img-fluid"><small class="opacity-25">Ariston (Аристон)</small></div>
-                                        <div class="col"><img src="img/logos-02.png" alt="" class="img-fluid"><small class="opacity-25">Samsung (Самсунг)</small></div>
-                                        <div class="col"><img src="img/logos-03.png" alt="" class="img-fluid"><small class="opacity-25">Bosch (Бош)</small></div>
-                                        <div class="col"><img src="img/logos-04.png" alt="" class="img-fluid"><small class="opacity-25">Beko (Беко)</small></div>
-                                        <div class="col"><img src="img/logos-05.png" alt="" class="img-fluid"><small class="opacity-25">LG (ЭлДжи)</small></div>
-                                        <div class="col"><img src="img/logos-07.png" alt="" class="img-fluid"><small class="opacity-25">Whirlpool (Вирпул)</small></div>
-                                        <div class="col"><img src="img/logos-06.png" alt="" class="img-fluid"><small class="opacity-25">Stinol (Стинол)</small></div>
-                                        <div class="col"><img src="img/logos-08.png" alt="" class="img-fluid"><small class="opacity-25">Бирюса</small></div>
-                                        <div class="col"><img src="img/logos-09.png" alt="" class="img-fluid"><small class="opacity-25">Indesit (Индезит)</small></div>
+                         <div class="col-lg-4 order-lg-2 rounded">
+                              <div class="position-relative d-flex align-items-center" style="width: 100%; height: 100%;">
+                                   <img src="img/door.png" alt="" class="" style="position: absolute; width: 100%; transform-origin: center left; transform: translate3d(50px, 0px, -10px) scale3d(1.1, 1.1, 1.0); ">
+                                   <div class="card rounded-5" id="we" style="">
+                                        <div class="cardblur rounded-5"></div>
+                                        <h3 class="p-3 position-relative">Мы ремонтируем все марки холодильников, вот некоторые из них</h3>
                                    </div>
                               </div>
+                         </div>
+                         <div class="col card bg-transparent order-lg-1 relative-container m-2">
+                              <div class="cardblur rounded"></div>
+                              <div class="container">
+                                   <div class="align-items-center text-center" style="transform: translateZ(0px)">
+                                        <div class="marqueeL">
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-02.png" alt="Samsung (Самсунг)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-03.png" alt="Bosch (Бош)" class="img-fluid"></div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-02.png" alt="Samsung (Самсунг)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-03.png" alt="Bosch (Бош)" class="img-fluid"></div>
+                                             </div>
+                                        </div>
+                                        <div class="marqueeR">
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-04.png" alt="Beko (Беко)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-05.png" alt="LG (ЭлДжи)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-07.png" alt="Whirlpool (Вирпул)" class="img-fluid"></div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-04.png" alt="Beko (Беко)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-05.png" alt="LG (ЭлДжи)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-07.png" alt="Whirlpool (Вирпул)" class="img-fluid"></div>
+                                             </div>
+                                        </div>
+                                        <div class="marqueeL">
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-06.png" alt="Stinol (Стинол)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-08.png" alt="Бирюса" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-09.png" alt="Indesit (Индезит)" class="img-fluid"></div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-06.png" alt="Stinol (Стинол)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-08.png" alt="Бирюса" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-09.png" alt="Indesit (Индезит)" class="img-fluid"></div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- <div class="LRfade rounded"></div> -->
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <section class="my-3 d-block d-sm-none">
+               <div class="text-dark card border-0">
+                    <div class="row g-0">
+                         <div class="col-lg-4 order-lg-2 rounded">
+                              <div class="position-relative d-flex align-items-center" style="overflow:hidden; width: 100%; height: 100%;">
+                                        <h2 class="p-2 text-center position-relative">Мы ремонтируем все марки холодильников, вот некоторые из них:</h2>
+                              </div>
+                         </div>
+                         <div class="col order-lg-1 relative-container m-1">
+                              <div class="container">
+                                   <div class="align-items-center text-center" style="transform: translateZ(0px)">
+                                        <div class="marqueeL">
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-02.png" alt="Samsung (Самсунг)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-03.png" alt="Bosch (Бош)" class="img-fluid"></div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-02.png" alt="Samsung (Самсунг)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-03.png" alt="Bosch (Бош)" class="img-fluid"></div>
+                                             </div>
+                                        </div>
+                                        <div class="marqueeR">
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-04.png" alt="Beko (Беко)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-05.png" alt="LG (ЭлДжи)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-07.png" alt="Whirlpool (Вирпул)" class="img-fluid"></div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-04.png" alt="Beko (Беко)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-05.png" alt="LG (ЭлДжи)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-07.png" alt="Whirlpool (Вирпул)" class="img-fluid"></div>
+                                             </div>
+                                        </div>
+                                        <div class="marqueeL">
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-06.png" alt="Stinol (Стинол)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-08.png" alt="Бирюса" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-09.png" alt="Indesit (Индезит)" class="img-fluid"></div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-06.png" alt="Stinol (Стинол)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-08.png" alt="Бирюса" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-09.png" alt="Indesit (Индезит)" class="img-fluid"></div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- <div class="LRfade rounded"></div> -->
                          </div>
                     </div>
                </div>
           </section>
      </div>
-</div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
           <div class="modal-content">
                <div class="modal-header">
@@ -358,37 +416,6 @@
 </div>
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-<script>AOS.init();</script>
-<script>
-     function toastErrorColorChange() {
-          document.getElementById('liveToast').className = "toast align-items-center text-bg-info text-light";
-     }
-// const myModal = new bootstrap.Modal('#hookModal', {
-//      keyboard: false
-// })
-// myModal.show()
-     const myModalEl = document.getElementById('exampleModal')
-     myModalEl.addEventListener('show.bs.modal', event => {
-          var coin = document.getElementById('coin');
-          confetti({
-               particleCount: 50,
-               angle: 60,
-               spread: 55,
-               origin: { x: 0 },
-          });
-          confetti({
-               particleCount: 50,
-               angle: 120,
-               spread: 55,
-               origin: { x: 1 },
-          });
-          coin.style.display = 'none';
-     })
-     myModalEl.addEventListener('hide.bs.modal', event => {
-          var coin = document.getElementById('coin');
-          coin.style.display = 'block';
-     })
-</script>
 <?php
 $parsed_ini = parse_ini_file("configs/conf.ini");
 $url = $parsed_ini['url'];
@@ -428,5 +455,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
      </script>";
 }
 ?>
+</div>
 </body>
 </html>
