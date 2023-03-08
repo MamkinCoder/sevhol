@@ -18,6 +18,16 @@
 <script src="node_modules/cleave.js/dist/cleave.min.js"></script>
 <script src="node_modules/cleave.js/dist/addons/cleave-phone.ru.js"></script>
 <script src="node_modules/canvas-confetti/dist/confetti.browser.js"></script>
+<?php
+// Detect if user agent is a Chromium-based browser
+$user_agent = $_SERVER['HTTP_USER_AGENT'];
+$is_chrome = strpos($user_agent, 'Chromium') !== false || strpos($user_agent, 'Chrome') !== false;
+
+// Load CSS stylesheet if user is using Chromium-based browser
+if ($is_chrome) {
+  echo '<link rel="stylesheet" type="text/css" href="css/chromium_styles.css">';
+}
+?>
 </head>
 <body>
      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -179,7 +189,7 @@
                     </div>
                </div>
           </section>
-          <section class="container position-relative" style="">
+          <section class="container position-relative">
                <div class="parallax-wrench aos d-none d-sm-block">
                     <img src="img/t-wrench.png" alt="wrench" class="">
                </div>
@@ -245,13 +255,13 @@
                     </div>
                </div>
           </section>
-          <section class="container my-3 d-none d-sm-block">
+          <section class="container my-3">
                <div class="text-dark">
                     <div class="row g-0">
                          <div class="col-lg-4 order-lg-2 rounded">
                               <div class="position-relative d-flex align-items-center" style="width: 100%; height: 100%;">
-                                   <img src="img/door.png" alt="" class="" style="position: absolute; width: 100%; transform-origin: center left; transform: translate3d(50px, 0px, -10px) scale3d(1.1, 1.1, 1.0); ">
-                                   <div class="card rounded-5" id="we" style="">
+                                   <img src="img/door.png" alt="" class="" style="position: absolute; width: 100%; transform-origin: center left; transform: translate3d(50px, 0px, -10px) scale3d(1.1, 1.1, 1.0);">
+                                   <div class="card rounded-5" id="we">
                                         <div class="cardblur rounded-5"></div>
                                         <h3 class="p-3 position-relative">Мы ремонтируем все марки холодильников, вот некоторые из них</h3>
                                    </div>
@@ -259,60 +269,6 @@
                          </div>
                          <div class="col card bg-transparent order-lg-1 relative-container m-2">
                               <div class="cardblur rounded"></div>
-                              <div class="container">
-                                   <div class="align-items-center text-center" style="transform: translateZ(0px)">
-                                        <div class="marqueeL">
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-02.png" alt="Samsung (Самсунг)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-03.png" alt="Bosch (Бош)" class="img-fluid"></div>
-                                             </div>
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-02.png" alt="Samsung (Самсунг)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-03.png" alt="Bosch (Бош)" class="img-fluid"></div>
-                                             </div>
-                                        </div>
-                                        <div class="marqueeR">
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-04.png" alt="Beko (Беко)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-05.png" alt="LG (ЭлДжи)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-07.png" alt="Whirlpool (Вирпул)" class="img-fluid"></div>
-                                             </div>
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-04.png" alt="Beko (Беко)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-05.png" alt="LG (ЭлДжи)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-07.png" alt="Whirlpool (Вирпул)" class="img-fluid"></div>
-                                             </div>
-                                        </div>
-                                        <div class="marqueeL">
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-06.png" alt="Stinol (Стинол)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-08.png" alt="Бирюса" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-09.png" alt="Indesit (Индезит)" class="img-fluid"></div>
-                                             </div>
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-06.png" alt="Stinol (Стинол)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-08.png" alt="Бирюса" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-09.png" alt="Indesit (Индезит)" class="img-fluid"></div>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-                              <!-- <div class="LRfade rounded"></div> -->
-                         </div>
-                    </div>
-               </div>
-          </section>
-          <section class="my-3 d-block d-sm-none">
-               <div class="text-dark card border-0">
-                    <div class="row g-0">
-                         <div class="col-lg-4 order-lg-2 rounded">
-                              <div class="position-relative d-flex align-items-center" style="overflow:hidden; width: 100%; height: 100%;">
-                                        <h2 class="p-2 text-center position-relative">Мы ремонтируем все марки холодильников, вот некоторые из них:</h2>
-                              </div>
-                         </div>
-                         <div class="col order-lg-1 relative-container m-1">
                               <div class="container">
                                    <div class="align-items-center text-center" style="transform: translateZ(0px)">
                                         <div class="marqueeL">

@@ -1,3 +1,10 @@
+window.addEventListener('load', function() {
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'css/chromium-animation.css';
+    document.head.appendChild(link);
+  });
+
 var cleave = new Cleave('.formatted-phone', {
     phone: true,
     phoneRegionCode: 'RU'
@@ -58,8 +65,8 @@ var blur_bg = function(entries, observer) {
 };
 
 // Create our observer
-var observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0% 0px -70% 0px"});
-var navbar_observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0px 0px -99% 0px"});
+var observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0% 0px -50% 0px"});
+var navbar_observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0px 0px -100% 0px"});
 var bgblur_observer = new IntersectionObserver(blur_bg, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0px 0px -50% 0px"});
 var we_observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "-40% 0px -20% 0px"});
 navbar_observer.observe(document.querySelector("#navbar-aos"))
