@@ -49,11 +49,7 @@
      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
      </symbol>
 </svg>
-<div class="parallax_wrapper" style="background: url(img/banner.jpg), url(img/banner-r.jpg);
-     background-attachment: fixed;
-     background-repeat: no-repeat, repeat;;
-     background-position: top 0% right 80%;
-     background-size: contain;">
+<div class="parallax_wrapper">
      <div class="container">
      <nav class="m-2 position-absolute navbar navbar-expand navbar-light">
                <div class="d-flex align-items-center">
@@ -92,6 +88,58 @@
                </a>
           </div>
      </nav>
+     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+          <div class="modal-content">
+               <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Заказать обратный звонок</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                    <div class="modal-body">
+                         <label for="name" class="form-label">Как к Вам обращаться:</label>
+                         <div class="input-group mb-3">
+                              <input type="text" autocomplete="name" placeholder="Николай Николаевич" id="name" aria-label="Name" class="form-control" required>
+                         </div>
+                         <label for="tel" class="form-label">Ваш номер телефона:</label>
+                         <div class="input-group mb-3">
+                              <span class="input-group-text" id="basic-addon1">+7</span>
+                              <input class="formatted-phone" placeholder="123 456 78 90" type="tel" id="tel" required>
+                         </div>
+                         <label class="form-label">Способ связи:</label>
+                         <div class="mb-3">
+                              <div class="form-check form-check-inline" id="contactType">
+                                   <input class="form-check-input" type="radio" name="contactType" value="whatsapp" id="radio_whatsapp" checked>
+                                   <label class="form-check-label" for="radio_whatsapp">
+                                        <img class="icon" src="img/WhatsApp.svg" alt="whatsapp logo"> WhatsApp
+                                   </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                   <input class="form-check-input" type="radio" name="contactType" value="telegram" id="radio_telegram">
+                                   <label class="form-check-label" for="radio_telegram">
+                                        <img class="icon" alt="telegram logo" src="img/Telegram.svg"> Telegram
+                                   </label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                   <input class="form-check-input" type="radio" name="contactType" value="phone" id="radio_phone">
+                                   <label class="form-check-label" for="radio_phone">
+                                        <img class="icon" alt="phone logo" src="img/phone.svg"> Мобильный
+                                   </label>
+                              </div>
+                         </div>
+                         <label for="email_form" class="col-form-label col-form-label-sm">Email (не обязательно):</label>
+                         <input type="email" class="form-control form-control-sm" name="email" id="email_form" placeholder="name@example.com">
+                    </div>
+                    <div class="modal-footer">
+                         <div class=" d-flex flex-sm-row align-content-end">
+                              <small class = "quet">Нажимая “Отправить”, Вы соглашаетесь с <a href="url">политикой обработки персональных данных</a>.</small>
+                              <button type="submit" class="btn btn-primary">Отправить</button>
+                         </div>
+                    </div>
+               </form>
+          </div>
+     </div>
+     </div>
      <div class="relative-container">
           <div class="d-none d-sm-block bgblur"></div>
           <div class="d-block d-sm-none bgblur-easy"></div>
@@ -131,7 +179,7 @@
                     </div>
                </div>
           </section>
-          <section class="container position-relative">
+          <section class="container position-relative" style="">
                <div class="parallax-wrench aos d-none d-sm-block">
                     <img src="img/t-wrench.png" alt="wrench" class="">
                </div>
@@ -310,60 +358,48 @@
                     </div>
                </div>
           </section>
-     </div>
-     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-     <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
-          <div class="modal-content">
-               <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Заказать обратный звонок</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-               </div>
-               <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-                    <div class="modal-body">
-                         <label for="name" class="form-label">Как к Вам обращаться:</label>
-                         <div class="input-group mb-3">
-                              <input type="text" autocomplete="name" placeholder="Николай Николаевич" id="name" aria-label="Name" class="form-control" required>
-                         </div>
-                         <label for="tel" class="form-label">Ваш номер телефона:</label>
-                         <div class="input-group mb-3">
-                              <span class="input-group-text" id="basic-addon1">+7</span>
-                              <input class="formatted-phone" placeholder="123 456 78 90" type="tel" id="tel" required>
-                         </div>
-                         <label class="form-label">Способ связи:</label>
-                         <div class="mb-3">
-                              <div class="form-check form-check-inline" id="contactType">
-                                   <input class="form-check-input" type="radio" name="contactType" value="whatsapp" id="radio_whatsapp" checked>
-                                   <label class="form-check-label" for="radio_whatsapp">
-                                        <img class="icon" src="img/WhatsApp.svg" alt="whatsapp logo"> WhatsApp
-                                   </label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                   <input class="form-check-input" type="radio" name="contactType" value="telegram" id="radio_telegram">
-                                   <label class="form-check-label" for="radio_telegram">
-                                        <img class="icon" alt="telegram logo" src="img/Telegram.svg"> Telegram
-                                   </label>
-                              </div>
-                              <div class="form-check form-check-inline">
-                                   <input class="form-check-input" type="radio" name="contactType" value="phone" id="radio_phone">
-                                   <label class="form-check-label" for="radio_phone">
-                                        <img class="icon" alt="phone logo" src="img/phone.svg"> Мобильный
-                                   </label>
-                              </div>
-                         </div>
-                         <label for="email_form" class="col-form-label col-form-label-sm">Email (не обязательно):</label>
-                         <input type="email" class="form-control form-control-sm" name="email" id="email_form" placeholder="name@example.com">
-                    </div>
-                    <div class="modal-footer">
-                         <div class=" d-flex flex-sm-row align-content-end">
-                              <small class = "quet">Нажимая “Отправить”, Вы соглашаетесь с <a href="url">политикой обработки персональных данных</a>.</small>
-                              <button type="submit" class="btn btn-primary">Отправить</button>
-                         </div>
-                    </div>
-               </form>
           </div>
+          <footer class="d-flex bg-light flex-sm-row justify-content-between align-items-center py-3 my-4 border-top">
+     <div class="d-flex align-items-center">
+          <a href="/" class="">
+               <img src="img/logo.svg" class="icon" id="logo" alt="logo">
+          </a>
+          <span class="ms-2">
+               © 2023 год "СевХолСервис" <br> powered by
+               <a href="https://getbootstrap.com">
+                    <svg id="b-icon" class="icon footer-shine">
+                         <use xlink:href="#bootstrap-outline"></use>
+                    </svg>
+               </a>
+          </span>
      </div>
+     <ul class="nav justify-content-end list-unstyled d-flex">
+          <li class="mx-2">
+               <a href="#">
+                    <svg class="icon footer-shine">
+                         <use xlink:href="#whatsapp-outline"></use>
+                    </svg>
+               </a>
+          </li>
+          <li class="mx-2">
+               <a href="#">
+                    <svg class="icon footer-shine">
+                         <use xlink:href="#telegram-outline"></use>
+                    </svg>
+               </a>
+          </li>
+          <!-- TODO -->
+          <li class="ms-2">
+               <a href="mailto:skv@ngs.ru">
+                    <svg class="icon footer-shine" width="30" height="30">
+                         <use xlink:href="#envelope"></use>
+                    </svg>
+               </a>
+          </li>
+     </ul>
+</footer>
 </div>
-<div class="toast-container position-fixed bottom-0 end-0 p-3">
+<!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
      <div id="liveToast" class="toast align-items-center text-dark" role="alert" aria-live="assertive" aria-atomic="true">
           <div class="d-flex">
                <div class="toast-body" id="toastMessage">
@@ -372,48 +408,8 @@
                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
           </div>
      </div>
-</div>
-<div class="container">
-     <footer class="d-flex flex-sm-row justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="d-flex align-items-center">
-               <a href="/" class="">
-                    <img src="img/logo.svg" class="icon" id="logo" alt="logo">
-               </a>
-               <span class="ms-2">
-                    © 2023 год "СевХолСервис" <br> powered by
-                    <a href="https://getbootstrap.com">
-                         <svg id="b-icon" class="icon footer-shine">
-                              <use xlink:href="#bootstrap-outline"></use>
-                         </svg>
-                    </a>
-               </span>
-          </div>
-          <ul class="nav justify-content-end list-unstyled d-flex">
-               <li class="mx-2">
-                    <a href="#">
-                         <svg class="icon footer-shine">
-                              <use xlink:href="#whatsapp-outline"></use>
-                         </svg>
-                    </a>
-               </li>
-               <li class="mx-2">
-                    <a href="#">
-                         <svg class="icon footer-shine">
-                              <use xlink:href="#telegram-outline"></use>
-                         </svg>
-                    </a>
-               </li>
-               <!-- TODO -->
-               <li class="ms-2">
-                    <a href="mailto:skv@ngs.ru">
-                         <svg class="icon footer-shine" width="30" height="30">
-                              <use xlink:href="#envelope"></use>
-                         </svg>
-                    </a>
-               </li>
-          </ul>
-     </footer>
-</div>
+</div> -->
+
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <?php
@@ -455,6 +451,5 @@ if ($_SERVER["REQUEST_METHOD"] == "POST"){
      </script>";
 }
 ?>
-</div>
 </body>
 </html>

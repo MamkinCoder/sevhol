@@ -47,10 +47,20 @@ var callback = function(entries, observer) {
     })
 };
 
+var blur_bg = function(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            document.querySelector(".parallax_wrapper").classList.add(targetActiveClass);
+        } else {
+            document.querySelector(".parallax_wrapper").classList.remove(targetActiveClass);
+        }
+    })
+};
+
 // Create our observer
 var observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0% 0px -70% 0px"});
 var navbar_observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0px 0px -99% 0px"});
-var bgblur_observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0px 0px -100% 0px"});
+var bgblur_observer = new IntersectionObserver(blur_bg, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0px 0px -50% 0px"});
 var we_observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "-40% 0px -20% 0px"});
 navbar_observer.observe(document.querySelector("#navbar-aos"))
 bgblur_observer.observe(document.querySelector(".bgblur"))

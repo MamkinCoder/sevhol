@@ -4,11 +4,12 @@
 }
 
 .relative-container {
+  transform-style: preserve-3d;
   position: relative;
   width: 100%;
 /*  z-index: 0;*/
-/*  overflow-y: auto;
-  overflow-x: hidden;*/
+/*  overflow-y: auto;*/
+/*  overflow-x: hidden;*/
 }
 
 .z-1 {

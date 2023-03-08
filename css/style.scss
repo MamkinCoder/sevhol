@@ -174,11 +174,34 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  // display: flow-root;
   z-index: 0;
   perspective: $perspective;
+  background-image: url(../img/banner.jpg), url(../img/banner-r.jpg);
+  background-attachment: fixed, auto;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-position: top 0% right 80%;
+  background-size: contain, contain;
+  transition: background-image 1s;
+}
+
+.parallax_wrapper.target-is-active {
+  background-image: url(../img/banner-bg.jpg), url(../img/banner-r-bg.jpg);
+  transition: background-image 1s;
+  // animation: changeBg 2s forwards;
+}
+
+@keyframes changeBg{
+   from {background-image: url(../img/banner.jpg);}
+   to {background-image: url(../img/banner-bg.jpg);}
 }
 
 .bgblur {
+  // background: url(../img/banner-bg.jpg);
+  // background-attachment: fixed;
+  // background-repeat: no-repeat;
+  // background-position: top 0% right 80%;
+  // background-size: contain;
   position: absolute;
   content: "";
   height: 100%;
@@ -186,15 +209,15 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
   backdrop-filter: blur(80px);
   -webkit-backdrop-filter: blur(80px);
   transform-origin: center;
-  transform: scale3d($scaleX, $scaleY, 1) translate3d(0, 0, $translateZ);
+  // transform: scale3d($scaleX, $scaleY, 1) translate3d(0, 0, $translateZ);
   opacity: 0;
   transition: opacity 0.3s ease-in,
 }
 
-.bgblur.target-is-active {
-  opacity: 1;
-  transition: 0.4s 0.5s ease-in;
-}
+// .bgblur.target-is-active {
+//   opacity: 1;
+//   transition: 0.4s 0.5s ease-in;
+// }
 
 .bgblur-easy {
   position: absolute;
