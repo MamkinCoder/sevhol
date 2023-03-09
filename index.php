@@ -1,36 +1,36 @@
 <!doctype html>
 <html lang="ru">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#160c28">
-<title>СевХолСервис</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Montserrat+Alternates:wght@500;700;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="css/style.css">
-<link rel="stylesheet" type="text/css" href="css/callme.css">
-<link rel="stylesheet" type="text/css" href="css/aurora-gradient.css">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
-<script src="node_modules/cleave.js/dist/cleave.min.js"></script>
-<script src="node_modules/cleave.js/dist/addons/cleave-phone.ru.js"></script>
-<script src="node_modules/canvas-confetti/dist/confetti.browser.js"></script>
-<?php
-// Detect if user agent is a Chromium-based browser
-$user_agent = $_SERVER['HTTP_USER_AGENT'];
-$is_chrome = strpos($user_agent, 'Chromium') !== false || strpos($user_agent, 'Chrome') !== false;
+     <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="theme-color" content="#160c28">
+     <title>СевХолСервис</title>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Montserrat+Alternates:wght@500;700;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="css/style.css">
+     <link rel="stylesheet" type="text/css" href="css/callme.css">
+     <link rel="stylesheet" type="text/css" href="css/aurora-gradient.css">
+     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+     <link rel="manifest" href="/site.webmanifest">
+     <script src="node_modules/cleave.js/dist/cleave.min.js"></script>
+     <script src="node_modules/cleave.js/dist/addons/cleave-phone.ru.js"></script>
+     <script src="node_modules/canvas-confetti/dist/confetti.browser.js"></script>
+     <?php
+     // Detect if user agent is a Chromium-based browser
+     $user_agent = $_SERVER['HTTP_USER_AGENT'];
+     $is_chrome = strpos($user_agent, 'Chromium') !== false || strpos($user_agent, 'Chrome') !== false;
 
-// Load CSS stylesheet if user is using Chromium-based browser
-if ($is_chrome) {
-  echo '<link rel="stylesheet" type="text/css" href="css/chromium_styles.css">';
-}
-?>
+     // Load CSS stylesheet if user is using Chromium-based browser
+     if ($is_chrome) {
+       echo '<link rel="stylesheet" type="text/css" href="css/chromium_styles.css">';
+     }
+     ?>
 </head>
 <body>
-     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
      <symbol id="envelope" viewBox="0 0 16 16">
      <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
      <path d="M14.247 14.269c1.01 0 1.587-.857 1.587-2.025v-.21C15.834 10.43 14.64 9 12.52 9h-.035C10.42 9 9 10.36 9 12.432v.214C9 14.82 10.438 16 12.358 16h.044c.594 0 1.018-.074 1.237-.175v-.73c-.245.11-.673.18-1.18.18h-.044c-1.334 0-2.571-.788-2.571-2.655v-.157c0-1.657 1.058-2.724 2.64-2.724h.04c1.535 0 2.484 1.05 2.484 2.326v.118c0 .975-.324 1.39-.639 1.39-.232 0-.41-.148-.41-.42v-2.19h-.906v.569h-.03c-.084-.298-.368-.63-.954-.63-.778 0-1.259.555-1.259 1.4v.528c0 .892.49 1.434 1.26 1.434.471 0 .896-.227 1.014-.643h.043c.118.42.617.648 1.12.648Zm-2.453-1.588v-.227c0-.546.227-.791.573-.791.297 0 .572.192.572.708v.367c0 .573-.253.744-.564.744-.354 0-.581-.215-.581-.8Z"/>
@@ -61,33 +61,33 @@ if ($is_chrome) {
 </svg>
 <div class="parallax_wrapper">
      <div class="container">
-     <nav class="m-2 position-absolute navbar navbar-expand navbar-light">
-               <div class="d-flex align-items-center">
-                    <a class="d-flex navbar-brand align-items-center opacity-75" href="#">
-                         <img src="img/logo.svg" class="navbar-icon me-2" alt="logo">
-                         <span class="lh-1">СевХол<br>Сервис</span>
-                    </a>
-                    <div class="navbar-number">
-                         <a class="link-primary" href="tel:+79785046000">+7 (978) 504-60-00</a> <br>
-                         <div class="marquee">
-                              <div>
-                                   <svg class="icon"><use xlink:href="#geo"></use></svg>Севастополь<svg class="icon"><use xlink:href="#geo"></use></svg>Евпатория<svg class="icon"><use xlink:href="#geo"></use></svg>Симферополь<svg class="icon"><use xlink:href="#geo"></use></svg>Ялта&nbsp;
+          <nav class="m-2 position-absolute navbar navbar-expand navbar-light">
+                    <div class="d-flex align-items-center">
+                         <a class="d-flex navbar-brand align-items-center opacity-75" href="#">
+                              <img src="img/logo.svg" class="navbar-icon me-2" alt="logo">
+                              <span class="lh-1">СевХол<br>Сервис</span>
+                         </a>
+                         <div class="navbar-number">
+                              <a class="link-primary" href="tel:+79785046000">+7 (978) 504-60-00</a> <br>
+                              <div class="marquee">
+                                   <div>
+                                        <svg class="icon"><use xlink:href="#geo"></use></svg>Севастополь<svg class="icon"><use xlink:href="#geo"></use></svg>Евпатория<svg class="icon"><use xlink:href="#geo"></use></svg>Симферополь<svg class="icon"><use xlink:href="#geo"></use></svg>Ялта&nbsp;
+                                   </div>
+                                   <div>
+                                        <svg class="icon"><use xlink:href="#geo"></use></svg>Севастополь<svg class="icon"><use xlink:href="#geo"></use></svg>Евпатория<svg class="icon"><use xlink:href="#geo"></use></svg>Симферополь<svg class="icon"><use xlink:href="#geo"></use></svg>Ялта&nbsp;
+                                   </div>
+                                   <a class="invisible" href="tel:+79785046000">+7 (978) 504-60-00</a>
                               </div>
-                              <div>
-                                   <svg class="icon"><use xlink:href="#geo"></use></svg>Севастополь<svg class="icon"><use xlink:href="#geo"></use></svg>Евпатория<svg class="icon"><use xlink:href="#geo"></use></svg>Симферополь<svg class="icon"><use xlink:href="#geo"></use></svg>Ялта&nbsp;
-                              </div>
-                              <a class="invisible" href="tel:+79785046000">+7 (978) 504-60-00</a>
                          </div>
                     </div>
-               </div>
-              <!--  <ul class="navbar-nav">
-                    <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-               </ul> -->
-     </nav>
+                   <!--  <ul class="navbar-nav">
+                         <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+                         <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+                         <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+                         <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+                         <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+                    </ul> -->
+          </nav>
      </div>
      <img src="img/banner-min.jpg" class="invisible" alt="" style="max-height: 80vh; max-width: 100vw;">
      <nav id="navbar-aos" class="navbar navbar-expand sticky-top bg-light navbar-light">
@@ -98,7 +98,406 @@ if ($is_chrome) {
                </a>
           </div>
      </nav>
-     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+     </button>
+     <div class="position-relative">
+          <div class="d-none d-lg-block bgblur"></div>
+          <div class="d-block d-lg-none bgblur-easy"></div>
+          <!-- masters big -->
+          <section class="position-relative container d-none d-sm-block py-5">
+               <div class="rounded cardblur"></div>
+               <div class="row g-0">
+                    <div class="card text-dark">
+                         <div class="card-body p-5">
+                              <!-- TODO AOS -->
+                               <figure id="brothers-aos" class="ms-5 w-50 float-end ">
+                                   <div class="position-relative">
+                                        <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
+                                        <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
+                                        <img src="img/invisible.png" class="img-fluid" alt="работяги">
+                                   </div>
+                              </figure>
+                              <h1 class="display-4 fw-bold">О нас</h1>
+                              <p class="fs-4">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- masters small -->
+          <section class="d-block d-sm-none mb-3">
+               <div class="row g-0">
+                    <div class="col-xl col-lg card border-0 align-items-center">
+                         <div class="card-body p-1">
+                              <h1 class="display-4 p-2 text-center fw-bold">О нас</h1>
+                              <figure class="w-100 float-end ">
+                                   <div class="position-relative">
+                                        <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
+                                        <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
+                                        <img src="img/invisible.png" class="img-fluid" alt="работяги">
+                                   </div>
+                              </figure>
+                              <p class=" p-2 fs-5">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- cards -->
+          <section class="container position-relative">
+               <div class="parallax-wrench aos d-none d-sm-block">
+                    <img src="img/t-wrench.png" alt="wrench" class="">
+               </div>
+               <div class="parallax-clock aos d-none d-sm-block">
+                    <img src="img/t-clock.png" alt="clock" class="">
+               </div>
+               <div class="parallax-shield aos d-none d-sm-block">
+                    <img src="img/t-shield.png" alt="shield" class="">
+               </div>
+               <div class="row gy-3 parallax-cards">
+                    <div class="col-lg-6">
+                         <div class="card bg-transparent text-dark">
+                              <div class="rounded cardblur"></div>
+                              <h2 class="card-header text-center">
+                              <svg class="icon me-2" width="30" height="30">
+                                   <use xlink:href="#wrench"></use>
+                              </svg>
+                              Детали от поставщика
+                              </h2>
+                              <div class="card-body">
+                                   <ul class="list-group list-group-flush fs-4">
+                                        <li class="list-group-item">У нас всегда есть  оригинальные запчасти в наличии и под заказ</li>
+                                        <li class="list-group-item">Всегда выбираем лучший для вас вариант - ремонт старой детали или замену на новую</li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="offset-lg-3 col-lg-7">
+                         <div class="card bg-transparent text-dark">
+                              <div class="rounded cardblur"></div>
+                              <h2 class="card-header text-center">
+                              <svg class="icon me-2" width="30" height="30">
+                                   <use xlink:href="#clock"></use>
+                              </svg>
+                              Ремонт в тот же день
+                              </h2>
+                              <div class="card-body">
+                                   <ul class="list-group list-group-flush fs-4">
+                                        <li class="list-group-item">В большинстве случаев мастер приедет в день обращения</li>
+                                        <li class="list-group-item">По нашей статистике, чаще всего ремонт производится после одного посещения мастера, все необходимые запчасти у него с собой</li>
+                                        <li class="list-group-item">Мы <strong>всегда</strong> доводим ремонт до конца</li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+                    <div class="offset-lg-7 col-lg-5">
+                         <div class="card bg-transparent text-dark">
+                              <div class="rounded cardblur"></div>
+                              <h2 class="card-header text-center">
+                              <svg class="icon me-2" width="30" height="30">
+                                   <use xlink:href="#shield"></use>
+                              </svg>
+                              Бесплатная диагностика и гарантия
+                              </h2>
+                              <div class="card-body">
+                                   <ul class="list-group list-group-flush fs-4">
+                                        <li class="list-group-item">Выезд мастера всегда <strong>бесплатный</strong></li>
+                                        <li class="list-group-item">Если вы согласны на ремонт, то диагностика мастера для вас бесплатна</li>
+                                        <li class="list-group-item">Гарантия на запчасти <strong>до полугода</strong> </li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- WE -->
+          <section class="container mt-2">
+               <div class="text-dark">
+                    <div class="row g-0">
+                         <div class="col-lg-4 order-lg-2 rounded">
+                              <div class="position-relative d-flex align-items-center" style="width: 100%; height: 100%;">
+                                   <img src="img/door.png" alt="" class="d-lg-block d-none" style="position: absolute; width: 100%; transform-origin: center left; transform: translate3d(50px, 0px, -10px) scale3d(1.1, 1.1, 1.0);">
+                                   <div class="card border-primary border border-5 rounded-5 mx-3" id="we">
+                                        <div class="cardblur rounded-5"></div>
+                                        <h3 class="p-3 position-relative">Мы ремонтируем все марки холодильников, вот некоторые из них</h3>
+                                   </div>
+                              </div>
+                         </div>
+                         <div class="col card bg-transparent order-lg-1 position-relative m-2">
+                              <div class="cardblur rounded"></div>
+                              <div class="container">
+                                   <div class="align-items-center text-center" style="transform: translateZ(0px)">
+                                        <div class="marqueeL">
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-02.png" alt="Samsung (Самсунг)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-03.png" alt="Bosch (Бош)" class="img-fluid"></div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-02.png" alt="Samsung (Самсунг)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-03.png" alt="Bosch (Бош)" class="img-fluid"></div>
+                                             </div>
+                                        </div>
+                                        <div class="marqueeR">
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-04.png" alt="Beko (Беко)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-05.png" alt="LG (ЭлДжи)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-07.png" alt="Whirlpool (Вирпул)" class="img-fluid"></div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-04.png" alt="Beko (Беко)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-05.png" alt="LG (ЭлДжи)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-07.png" alt="Whirlpool (Вирпул)" class="img-fluid"></div>
+                                             </div>
+                                        </div>
+                                        <div class="marqueeL">
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-06.png" alt="Stinol (Стинол)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-08.png" alt="Бирюса" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-09.png" alt="Indesit (Индезит)" class="img-fluid"></div>
+                                             </div>
+                                             <div class="row">
+                                                  <div class="col"><img src="img/logos-06.png" alt="Stinol (Стинол)" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-08.png" alt="Бирюса" class="img-fluid"></div>
+                                                  <div class="col"><img src="img/logos-09.png" alt="Indesit (Индезит)" class="img-fluid"></div>
+                                             </div>
+                                        </div>
+                                   </div>
+                              </div>
+                              <!-- <div class="LRfade rounded"></div> -->
+                         </div>
+                    </div>
+               </div>
+          </section>
+          <!-- Table -->
+          <section class="container position-relative ">
+               <div class="rounded cardblur"></div>
+               <table class="table table-hover fs-md-3" style="transform: translateZ(0px)">
+                 <thead>
+                   <tr>
+                     <th scope="col">#</th>
+                     <th scope="col">Услуга</th>
+                     <th scope="col">Цена</th>
+                   </tr>
+                 </thead>
+                    <tbody>
+                         <tr>
+                              <th scope="row">1</th>
+                              <td>Диагностика (с использованием х/а)</td>
+                              <td>500(1200) р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">2</th>
+                              <td>Заправка холодильного агрегата хладагентом</td>
+                              <td>2000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">3</th>
+                              <td>Заправка холодильного агрегата хладагентом (R600a – взрывоопасный газ !!!)</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">4</th>
+                              <td>Установка заправочного узла (клапан Шредера) *</td>
+                              <td>1000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">5</th>
+                              <td>Замена фильтра осушителя (силикагель, цианид) *</td>
+                              <td>1000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">6</th>
+                              <td>Ремонт испарителя «капельного типа» *</td>
+                              <td>5000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">7</th>
+                              <td>Ремонт испарителя «no frost» *</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">8</th>
+                              <td>Замена испарителя капельного типа * **</td>
+                              <td>5000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">9</th>
+                              <td>Замена испарителя «no frost» * **</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">10</th>
+                              <td>Установка конденсатора холодильного агрегата* **</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">11</th>
+                              <td>Прочистка капиллярного трубопровода* **</td>
+                              <td>2000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">12</th>
+                              <td>Замена капиллярного трубопровода* **</td>
+                              <td>3000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">13</th>
+                              <td>Удаление влаги в системе холодильного агрегата (вакуум, азот(N2)) * **</td>
+                              <td>1000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">14</th>
+                              <td>Замена мотор-компрессора (монтаж-демонтаж) * **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">15</th>
+                              <td>Расходные материалы при капитальном ремонте (серебро, трубопровод, фильтра, заправочные узлы) ***</td>
+                              <td>от 1000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">16</th>
+                              <td>Диагностика</td>
+                              <td>500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">17</th>
+                              <td>Диагностика системы «no frost» (сборка- разборка) ***</td>
+                              <td>1200р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">18</th>
+                              <td>Мелкий ремонт (замена шнура питания, кнопки, выключателя, замена петель, и т.д.) ***</td>
+                              <td>от 1500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">19</th>
+                              <td>Замена пускозащитного реле **</td>
+                              <td>3000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">20</th>
+                              <td>Замена терморегулятора **</td>
+                              <td>3000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">21</th>
+                              <td>Замена датчика **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">22</th>
+                              <td>Замена таймера **</td>
+                              <td>3000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">23</th>
+                              <td>Замена нагревателя **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">24</th>
+                              <td>Замена плавкого предохранителя **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">25</th>
+                              <td>Замена дефростера **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">26</th>
+                              <td>Замена мотор-вентилятора **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">27</th>
+                              <td>Ремонт платы управления ***</td>
+                              <td>от 7000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">28</th>
+                              <td>Ремонт-восстановление эл.цепи ***</td>
+                              <td>от 1500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">29</th>
+                              <td>Прочистка дренажной системы (системы no frost)</td>
+                              <td>2000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">30</th>
+                              <td>Замена уплотнительной резины (одна камера) ***</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">31</th>
+                              <td>Ремонт, восстановление теплоизоляции холодильного шкафа (одна камера) ***</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">32</th>
+                              <td>Перенавеска дверей холодильного шкафа ***</td>
+                              <td>от 2500р</td>
+                         </tr>
+                         <tr>
+                              <td colspan="3" style="white-space: pre-line;"><small class="quet">Примечания:
+                              <b>*</b> без заправки х/а
+                              <b>**</b> без учета стоимости материала и запасных частей
+                              <b>***</b> зависит от сложности
+                              <b>****</b> Диагностика при отказе от ремонта или при невозможности ремонта по независящим от мастера причинам -  500 рублей.
+                              При осуществлении ремонта - диагностика бесплатно.</small>
+                              </td>
+                         </tr>
+                    </tbody>
+               </table>
+          </section>
+          </div>
+<footer class="d-flex bg-light flex-sm-row justify-content-between align-items-center">
+     <div class="d-flex align-items-center">
+          <a href="/" class="">
+               <img src="img/logo.svg" class="icon" id="logo" alt="logo">
+          </a>
+          <span class="ms-2">
+               © 2023 год "СевХолСервис" <br> powered by
+               <a href="https://getbootstrap.com">
+                    <svg id="b-icon" class="icon footer-shine">
+                         <use xlink:href="#bootstrap-outline"></use>
+                    </svg>
+               </a>
+          </span>
+     </div>
+     <ul class="nav justify-content-end list-unstyled d-flex">
+          <li class="mx-2">
+               <a href="#">
+                    <svg class="icon footer-shine">
+                         <use xlink:href="#whatsapp-outline"></use>
+                    </svg>
+               </a>
+          </li>
+          <li class="mx-2">
+               <a href="#">
+                    <svg class="icon footer-shine">
+                         <use xlink:href="#telegram-outline"></use>
+                    </svg>
+               </a>
+          </li>
+          <!-- TODO -->
+          <li class="ms-2">
+               <a href="mailto:skv@ngs.ru">
+                    <svg class="icon footer-shine" width="30" height="30">
+                         <use xlink:href="#envelope"></use>
+                    </svg>
+               </a>
+          </li>
+     </ul>
+</footer>
+</div>
+     <div class="callme">
+          <img src="img/callme.png" alt="" class="img-fluid">
+     </div>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
           <div class="modal-content">
                <div class="modal-header">
@@ -149,263 +548,235 @@ if ($is_chrome) {
                </form>
           </div>
      </div>
-     </div>
-     <div class="relative-container">
-          <div class="d-none d-sm-block bgblur"></div>
-          <div class="d-block d-sm-none bgblur-easy"></div>
-          <section class="relative-container container d-none d-sm-block my-5">
-               <div class="rounded cardblur"></div>
-               <div class="row g-0">
-                    <div class="card text-dark">
-                         <div class="card-body p-5">
-                              <!-- TODO AOS -->
-                               <figure id="brothers-aos" class="ms-5 w-50 float-end ">
-                                   <div class="position-relative">
-                                        <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
-                                        <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
-                                        <img src="img/invisible.png" class="img-fluid" alt="работяги">
-                                   </div>
-                              </figure>
-                              <h1 class="display-4 fw-bold">О нас</h1>
-                              <p class="fs-5">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
-                         </div>
-                    </div>
-               </div>
-          </section>
-          <section class="d-block d-sm-none mb-3">
-               <div class="row g-0">
-                    <div class="col-xl col-lg card border-0 align-items-center">
-                         <div class="card-body p-1">
-                              <h1 class="display-4 p-2 text-center fw-bold">О нас</h1>
-                              <figure class="w-100 float-end ">
-                                   <div class="position-relative">
-                                        <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
-                                        <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
-                                        <img src="img/invisible.png" class="img-fluid" alt="работяги">
-                                   </div>
-                              </figure>
-                              <p class=" p-2 fs-5">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
-                         </div>
-                    </div>
-               </div>
-          </section>
-          <section class="container position-relative">
-               <div class="parallax-wrench aos d-none d-sm-block">
-                    <img src="img/t-wrench.png" alt="wrench" class="">
-               </div>
-               <div class="parallax-clock aos d-none d-sm-block">
-                    <img src="img/t-clock.png" alt="clock" class="">
-               </div>
-               <div class="parallax-shield aos d-none d-sm-block">
-                    <img src="img/t-shield.png" alt="shield" class="">
-               </div>
-               <div class="row gy-3 parallax-cards">
-                    <div class="col-md-6">
-                         <div class="card bg-transparent text-dark">
-                              <div class="rounded cardblur"></div>
-                              <h4 class="card-header text-center">
-                              <svg class="icon me-2" width="30" height="30">
-                                   <use xlink:href="#wrench"></use>
-                              </svg>
-                              Детали от поставщика
-                              </h4>
-                              <div class="card-body">
-                                   <ul class="list-group list-group-flush fs-6">
-                                        <li class="list-group-item">У нас всегда есть  оригинальные запчасти в наличии и под заказ</li>
-                                        <li class="list-group-item">Всегда выбираем лучший для вас вариант - ремонт старой детали или замену на новую</li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="offset-md-3 col-md-7">
-                         <div class="card bg-transparent text-dark">
-                              <div class="rounded cardblur"></div>
-                              <h4 class="card-header text-center">
-                              <svg class="icon me-2" width="30" height="30">
-                                   <use xlink:href="#clock"></use>
-                              </svg>
-                              Ремонт в тот же день
-                              </h4>
-                              <div class="card-body">
-                                   <ul class="list-group list-group-flush fs-6">
-                                        <li class="list-group-item">В большинстве случаев мастер приедет в день обращения</li>
-                                        <li class="list-group-item">По нашей статистике, чаще всего ремонт производится после одного посещения мастера, все необходимые запчасти у него с собой</li>
-                                        <li class="list-group-item">Мы <strong>всегда</strong> доводим ремонт до конца</li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div>
-                    <div class="offset-md-7 col-md-5">
-                         <div class="card bg-transparent text-dark">
-                              <div class="rounded cardblur"></div>
-                              <h4 class="card-header text-center">
-                              <svg class="icon me-2" width="30" height="30">
-                                   <use xlink:href="#shield"></use>
-                              </svg>
-                              Бесплатная диагностика и гарантия
-                              </h4>
-                              <div class="card-body">
-                                   <ul class="list-group list-group-flush fs-6">
-                                        <li class="list-group-item">Выезд мастера всегда <strong>бесплатный</strong></li>
-                                        <li class="list-group-item">Если вы согласны на ремонт, то диагностика мастера для вас бесплатна</li>
-                                        <li class="list-group-item">Гарантия на запчасти <strong>до полугода</strong> </li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div>
-               </div>
-          </section>
-          <section class="container my-3">
-               <div class="text-dark">
-                    <div class="row g-0">
-                         <div class="col-lg-4 order-lg-2 rounded">
-                              <div class="position-relative d-flex align-items-center" style="width: 100%; height: 100%;">
-                                   <img src="img/door.png" alt="" class="" style="position: absolute; width: 100%; transform-origin: center left; transform: translate3d(50px, 0px, -10px) scale3d(1.1, 1.1, 1.0);">
-                                   <div class="card rounded-5" id="we">
-                                        <div class="cardblur rounded-5"></div>
-                                        <h3 class="p-3 position-relative">Мы ремонтируем все марки холодильников, вот некоторые из них</h3>
-                                   </div>
-                              </div>
-                         </div>
-                         <div class="col card bg-transparent order-lg-1 relative-container m-2">
-                              <div class="cardblur rounded"></div>
-                              <div class="container">
-                                   <div class="align-items-center text-center" style="transform: translateZ(0px)">
-                                        <div class="marqueeL">
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-02.png" alt="Samsung (Самсунг)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-03.png" alt="Bosch (Бош)" class="img-fluid"></div>
-                                             </div>
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-02.png" alt="Samsung (Самсунг)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-03.png" alt="Bosch (Бош)" class="img-fluid"></div>
-                                             </div>
-                                        </div>
-                                        <div class="marqueeR">
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-04.png" alt="Beko (Беко)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-05.png" alt="LG (ЭлДжи)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-07.png" alt="Whirlpool (Вирпул)" class="img-fluid"></div>
-                                             </div>
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-04.png" alt="Beko (Беко)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-05.png" alt="LG (ЭлДжи)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-07.png" alt="Whirlpool (Вирпул)" class="img-fluid"></div>
-                                             </div>
-                                        </div>
-                                        <div class="marqueeL">
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-06.png" alt="Stinol (Стинол)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-08.png" alt="Бирюса" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-09.png" alt="Indesit (Индезит)" class="img-fluid"></div>
-                                             </div>
-                                             <div class="row">
-                                                  <div class="col"><img src="img/logos-06.png" alt="Stinol (Стинол)" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-08.png" alt="Бирюса" class="img-fluid"></div>
-                                                  <div class="col"><img src="img/logos-09.png" alt="Indesit (Индезит)" class="img-fluid"></div>
-                                             </div>
-                                        </div>
-                                   </div>
-                              </div>
-                              <!-- <div class="LRfade rounded"></div> -->
-                         </div>
-                    </div>
-               </div>
-          </section>
-          </div>
-          <footer class="d-flex bg-light flex-sm-row justify-content-between align-items-center py-3 my-4 border-top">
-     <div class="d-flex align-items-center">
-          <a href="/" class="">
-               <img src="img/logo.svg" class="icon" id="logo" alt="logo">
-          </a>
-          <span class="ms-2">
-               © 2023 год "СевХолСервис" <br> powered by
-               <a href="https://getbootstrap.com">
-                    <svg id="b-icon" class="icon footer-shine">
-                         <use xlink:href="#bootstrap-outline"></use>
-                    </svg>
-               </a>
-          </span>
-     </div>
-     <ul class="nav justify-content-end list-unstyled d-flex">
-          <li class="mx-2">
-               <a href="#">
-                    <svg class="icon footer-shine">
-                         <use xlink:href="#whatsapp-outline"></use>
-                    </svg>
-               </a>
-          </li>
-          <li class="mx-2">
-               <a href="#">
-                    <svg class="icon footer-shine">
-                         <use xlink:href="#telegram-outline"></use>
-                    </svg>
-               </a>
-          </li>
-          <!-- TODO -->
-          <li class="ms-2">
-               <a href="mailto:skv@ngs.ru">
-                    <svg class="icon footer-shine" width="30" height="30">
-                         <use xlink:href="#envelope"></use>
-                    </svg>
-               </a>
-          </li>
-     </ul>
-</footer>
 </div>
-<!-- <div class="toast-container position-fixed bottom-0 end-0 p-3">
-     <div id="liveToast" class="toast align-items-center text-dark" role="alert" aria-live="assertive" aria-atomic="true">
-          <div class="d-flex">
-               <div class="toast-body" id="toastMessage">
-                    Hello, world! This is a toast message.
-               </div>
-               <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+
+<div class="modal fade modal-dialog modal-dialog-scrollable" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" class="" id="exampleModal2">
+     <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
+          <div class="modal-content">
+               <table class="table table-hover fs-md-3">
+                 <thead>
+                   <tr>
+                     <th scope="col">#</th>
+                     <th scope="col">Услуга</th>
+                     <th scope="col">Цена</th>
+                   </tr>
+                 </thead>
+                    <tbody>
+                         <tr>
+                              <th scope="row">1</th>
+                              <td>Диагностика (с использованием х/а)</td>
+                              <td>500(1200) р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">2</th>
+                              <td>Заправка холодильного агрегата хладагентом</td>
+                              <td>2000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">3</th>
+                              <td>Заправка холодильного агрегата хладагентом (R600a – взрывоопасный газ !!!)</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">4</th>
+                              <td>Установка заправочного узла (клапан Шредера) *</td>
+                              <td>1000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">5</th>
+                              <td>Замена фильтра осушителя (силикагель, цианид) *</td>
+                              <td>1000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">6</th>
+                              <td>Ремонт испарителя «капельного типа» *</td>
+                              <td>5000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">7</th>
+                              <td>Ремонт испарителя «no frost» *</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">8</th>
+                              <td>Замена испарителя капельного типа * **</td>
+                              <td>5000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">9</th>
+                              <td>Замена испарителя «no frost» * **</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">10</th>
+                              <td>Установка конденсатора холодильного агрегата* **</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">11</th>
+                              <td>Прочистка капиллярного трубопровода* **</td>
+                              <td>2000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">12</th>
+                              <td>Замена капиллярного трубопровода* **</td>
+                              <td>3000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">13</th>
+                              <td>Удаление влаги в системе холодильного агрегата (вакуум, азот(N2)) * **</td>
+                              <td>1000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">14</th>
+                              <td>Замена мотор-компрессора (монтаж-демонтаж) * **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">15</th>
+                              <td>Расходные материалы при капитальном ремонте (серебро, трубопровод, фильтра, заправочные узлы) ***</td>
+                              <td>от 1000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">16</th>
+                              <td>Диагностика</td>
+                              <td>500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">17</th>
+                              <td>Диагностика системы «no frost» (сборка- разборка) ***</td>
+                              <td>1200р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">18</th>
+                              <td>Мелкий ремонт (замена шнура питания, кнопки, выключателя, замена петель, и т.д.) ***</td>
+                              <td>от 1500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">19</th>
+                              <td>Замена пускозащитного реле **</td>
+                              <td>3000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">20</th>
+                              <td>Замена терморегулятора **</td>
+                              <td>3000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">21</th>
+                              <td>Замена датчика **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">22</th>
+                              <td>Замена таймера **</td>
+                              <td>3000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">23</th>
+                              <td>Замена нагревателя **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">24</th>
+                              <td>Замена плавкого предохранителя **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">25</th>
+                              <td>Замена дефростера **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">26</th>
+                              <td>Замена мотор-вентилятора **</td>
+                              <td>3500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">27</th>
+                              <td>Ремонт платы управления ***</td>
+                              <td>от 7000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">28</th>
+                              <td>Ремонт-восстановление эл.цепи ***</td>
+                              <td>от 1500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">29</th>
+                              <td>Прочистка дренажной системы (системы no frost)</td>
+                              <td>2000р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">30</th>
+                              <td>Замена уплотнительной резины (одна камера) ***</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">31</th>
+                              <td>Ремонт, восстановление теплоизоляции холодильного шкафа (одна камера) ***</td>
+                              <td>2500р</td>
+                         </tr>
+                         <tr>
+                              <th scope="row">32</th>
+                              <td>Перенавеска дверей холодильного шкафа ***</td>
+                              <td>от 2500р</td>
+                         </tr>
+                         <tr>
+                              <td colspan="3" style="white-space: pre-line;"><small class="quet">Примечания:
+                              <b>*</b> без заправки х/а
+                              <b>**</b> без учета стоимости материала и запасных частей
+                              <b>***</b> зависит от сложности
+                              <b>****</b> Диагностика при отказе от ремонта или при невозможности ремонта по независящим от мастера причинам -  500 рублей.
+                              При осуществлении ремонта - диагностика бесплатно.</small>
+                              </td>
+                         </tr>
+                    </tbody>
+               </table>
           </div>
      </div>
-</div> -->
+</div>
 
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <?php
-$parsed_ini = parse_ini_file("configs/conf.ini");
-$url = $parsed_ini['url'];
-$chat_id = $parsed_ini['chat_id'];
-$name = $message = $contact = $email = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST"){
-     $name = $_POST['name'];
-     $tel = $_POST['tel'];
-     $contact = $_POST['contactType'];
-     $email = $_POST['email'];
-     $message = urlencode($name."\n+7 ".$tel."\n".$contact."\n".$email);
-     $bot_response = @file_get_contents($url."sendmessage?text=".$message."&chat_id=".$chat_id."&parse_mode=HTML");
-     $toast_msg = "Спасибо! В ближайшее время мы с Вами свяжемся.";
-     if ($bot_response ===false) {
-          $toast_msg = "Ошибка сервера. Извините, в данный момент мы не можем Вам позвонить.";
+     $parsed_ini = parse_ini_file("configs/conf.ini");
+     $url = $parsed_ini['url'];
+     $chat_id = $parsed_ini['chat_id'];
+     $name = $message = $contact = $email = "";
+     if ($_SERVER["REQUEST_METHOD"] == "POST"){
+          $name = $_POST['name'];
+          $tel = $_POST['tel'];
+          $contact = $_POST['contactType'];
+          $email = $_POST['email'];
+          $message = urlencode($name."\n+7 ".$tel."\n".$contact."\n".$email);
+          $bot_response = @file_get_contents($url."sendmessage?text=".$message."&chat_id=".$chat_id."&parse_mode=HTML");
+          $toast_msg = "Спасибо! В ближайшее время мы с Вами свяжемся.";
+          if ($bot_response ===false) {
+               $toast_msg = "Ошибка сервера. Извините, в данный момент мы не можем Вам позвонить.";
+               echo "<script type=\"text/javascript\">
+               toastErrorColorChange();
+               </script>";
+          }
+          if (empty($tel)) {
+               $toast_msg = "Вы не написали телефон! Пожалуйста, укажите, как с вами связаться.";
+               echo "<script type=\"text/javascript\">
+               toastErrorColorChange();
+               </script>";
+          }
+          if (empty($name)) {
+               $toast_msg = "Вы не написали имя! Пожалуйста, скажите, как к Вам обращаться.";
+               echo "<script type=\"text/javascript\">
+               toastErrorColorChange();
+               </script>";
+          }
           echo "<script type=\"text/javascript\">
-          toastErrorColorChange();
+          document.getElementById('toastMessage').innerHTML = \"$toast_msg\";
+          const toastLiveExample = document.getElementById('liveToast');
+          const toast = new bootstrap.Toast(toastLiveExample);
+          toast.show();
           </script>";
      }
-     if (empty($tel)) {
-          $toast_msg = "Вы не написали телефон! Пожалуйста, укажите, как с вами связаться.";
-          echo "<script type=\"text/javascript\">
-          toastErrorColorChange();
-          </script>";
-     }
-     if (empty($name)) {
-          $toast_msg = "Вы не написали имя! Пожалуйста, скажите, как к Вам обращаться.";
-          echo "<script type=\"text/javascript\">
-          toastErrorColorChange();
-          </script>";
-     }
-     echo "<script type=\"text/javascript\">
-     document.getElementById('toastMessage').innerHTML = \"$toast_msg\";
-     const toastLiveExample = document.getElementById('liveToast');
-     const toast = new bootstrap.Toast(toastLiveExample);
-     toast.show();
-     </script>";
-}
 ?>
 </body>
 </html>

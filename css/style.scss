@@ -38,8 +38,16 @@ $list-group-border-color:           rgba(black, .250);
 
 $card-bg: rgba(map-get($theme-colors, "light"), 0.2);
 
+$table-bg: rgba(map-get($theme-colors, "light"), 0.2);
+
+
 $modal-content-bg: map-get($theme-colors, "light");
 // $modal-content-color:  map-get($theme-colors, "secondary");
+
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/utilities";
 
 $utilities:
   (
@@ -48,15 +56,17 @@ $utilities:
       class: min-vh,
       values: (100: 100vh, 90: 90vh, 80: 80vh, 75: 75vh, 70: 70vh, 65: 65vh, 60: 60vh, 50: 50vh, 45: 45vh, 40: 40vh, 30: 30vh, 25: 25vh, 20: 20vh)
     ),
+
+      "font-size": (
+      rfs: true,
+      property: font-size,
+      class: fs,
+      values: $font-sizes,
+      responsive: true
+    ),
 );
 
-* {
-  // transform-style: preserve-3d;
-}
 
-.relative-container {
-  position: relative;
-}
 
 
 // $enable-shadows: true;
@@ -206,7 +216,6 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
 
 .bgblur {
   position: absolute;
-  content: "";
   height: 100%;
   width: 100%;
   opacity: 0;
@@ -220,7 +229,6 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
 
 .bgblur-easy {
   position: absolute;
-  content: "";
   height: 100%;
   width: 100%;
   backdrop-filter: blur(80px);
@@ -242,24 +250,24 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
 .parallax-wrench {
   position: absolute;
   transform-origin: left top;
-  transform: translateZ(-30px) scale(0.5);
-  top: -60%;
+  transform: translateZ(-30px) scale(0.6);
+  top: -40%;
   left: 70%;
 }
 
 .parallax-clock {
   position: absolute;
   transform-origin: left top;
-  transform: translateZ(-21px) scale(0.5);
-  top: -55%;
+  transform: translateZ(-21px) scale(0.6);
+  top: -40%;
   left: -10%;
 }
 
 .parallax-shield {
   position: absolute;
   transform-origin: left top;
-  transform: translateZ(-25px) scale(0.5);
-  top: -50%;
+  transform: translateZ(-25px) scale(0.6);
+  top: -30%;
   left: 35%;
 }
 
@@ -398,3 +406,10 @@ $dur: 25s;
   animation: marqueeR $dur calc($dur/2) linear infinite;
 }
 
+
+.callme {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 12vmax;
+}
