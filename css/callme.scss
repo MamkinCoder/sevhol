@@ -1,14 +1,14 @@
-$coin-diameter: 100px;
+$coin-diameter: 100%;
 $coin-thickness: 20px;
 $coin-color: #fff;
 // dime
 // $coin-front: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Dime_Obverse_13.png/440px-Dime_Obverse_13.png";
 // $coin-back: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/79/Dime_Reverse_13.png/440px-Dime_Reverse_13.png";
 // penny
-$coin-front: "../img/callme.png";
+$coin-front: "../img/callme.gif";
 $coin-back: "https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/US_One_Cent_Rev.png/440px-US_One_Cent_Rev.png";
 $edge-faces: 80;
-$edge-face-length: 3.14*$coin-diameter/$edge-faces;
+$edge-face-length: calc(3.14*$coin-diameter/$edge-faces);
 $turn-time: 3s;
 
 .box {
@@ -31,54 +31,24 @@ $turn-time: 3s;
   height: $coin-diameter;
   border-radius: 50%;
   overflow: hidden;
-  background-color: $coin-color;
+  background-image: url($coin-front);
+  background-size: cover;
+  transform: rotateX(0deg);
 
   &:after {
     content: "";
     position: absolute;
-    left: -$coin-diameter/2;
+    left: calc(-1 * $coin-diameter/2);
     bottom: 100%;
     display: block;
-    height: $coin-diameter/1.5;
-    width: $coin-diameter*2;
+    height: calc($coin-diameter/1.5);
+    width: calc($coin-diameter*2);
     background: #fff;
     opacity: 0.3;
     animation: shine linear $turn-time alternate infinite;
   }
 }
 
-.coin_front {
-  background-image: url($coin-front);
-  background-color: white;
-  background-size: cover;
-  transform: rotateX(-18deg) rotateY(26deg) rotateZ(-1deg);
-}
-// .coin_back {
-//   background-image: url($coin-back);
-//   background-size: cover;
-//   transform: translateZ(-$coin-thickness/2) rotateX(-18deg) rotateY(180deg) rotateY(26deg) rotateZ(-8.1deg);
-// }
-
-// .coin_edge {
-//   @for $i from 1 through $edge-faces {
-//     div:nth-child(#{$i}) {
-//       position: absolute;
-//       left: 45px;
-//       height: $edge-face-length;
-//       width: $coin-thickness;
-//       background: darken( $coin-color, ( ($i - $edge-faces/2) * ($i - $edge-faces/2)) / ($edge-faces*$edge-faces/4) * 100 * 0.7 );
-//       transform:
-//         rotateX(-18deg)
-//         rotateY(26deg)
-//         rotateZ(-1deg)
-//         translateY(#{$coin-diameter/2-$edge-face-length/2 - 2})
-//         translateX(#{$coin-diameter/2-$coin-thickness/2-52})
-//         rotateZ(360deg/$edge-faces*$i+90)
-//         translateX(#{($coin-diameter - 1)/2})
-//         rotateY(90deg);
-//     }
-//   }
-// }
 
 .coin_shadow {
   position: absolute;
@@ -94,43 +64,53 @@ $turn-time: 3s;
 
 }
 
+
 @keyframes rotate3d {
   0% {
-    transform: perspective(1000px) rotate3d(0.1, 0.8, -0.3, 20deg);
+    transform: perspective(800px) rotate3d(0.1, 1, 0, 30deg);
   }
 
   100% {
-    transform: perspective(1000px) rotate3d(0.1, 0.8, -0.3, -30deg);
+    transform: perspective(800px) rotate3d(0.1, 1, 0, -30deg);
   }
 }
 
-@keyframes rotateShadow {
-  0% {
-    transform: rotateX(50deg) rotateX(-29deg) rotateY(20deg) translateY(-70px) translateZ(-$coin-diameter*1.1) scale(.5)
-  }
-
-  100% {
-    transform: rotateX(50deg) rotateX(-29deg) rotateY(20deg) translateY(-70px) translateZ(-$coin-diameter*1.1) scale(.4)
-  }
-}
-
-@keyframes rotate360 {
-  0% {
-    transform: perspective(1000px) rotate3d(0, 0, 1, 0deg);
-  }
-
-  100% {
-    transform: perspective(1000px) rotate3d(0, 0, 1, -360deg);
-  }
-}
 
 @keyframes shine {
   0%, 15% {
-    transform: translateY($coin-diameter*2) rotate(-40deg);
+    transform: translateY($coin-diameter*3) rotate(-40deg);
   }
   50% {
     transform: translateY(-$coin-diameter) rotate(-40deg);
   }
+}
+
+.callme {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 25vmin;
+  height: 25vmin;
+  max-width: 150px;
+  max-height: 150px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-in,
+}
+
+.callme.target-is-active {
+  pointer-events: auto;
+  opacity: 1;
+  transition: 0.4s ease-in;
+}
+
+.clipboard{
+  width: $coin-diameter;
+  height: $coin-diameter;
+  background-image: url("../img/clipboard2.png");
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .link {
@@ -139,17 +119,14 @@ $turn-time: 3s;
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 3;
   cursor: pointer;
 
-  &:hover .coin{
-    // display: none;
+  &:hover .coin_front {
+    background-image: url("../img/callme_dark.gif");
   }
 
-  &:hover .coin_front {
-    background-image: url("../img/callme_dark.png");
-    // background-color: skyblue;
-    // animation: rotate360 linear $turn-time/2;
+  &:hover .clipboard {
+    background-image: url("../img/clipboard.png");
   }
 }
 

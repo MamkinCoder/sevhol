@@ -188,10 +188,12 @@ $scaleX: calc(1 + (($translateZ * -1) / $perspective));
 $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
 // $scaleZ: calc($perspective / ($perspective + $translateZ) + 0.05);
 
+
 .parallax_wrapper {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
+  transform-style: flat;
   // display: flow-root;
   z-index: 0;
   perspective: $perspective;
@@ -201,10 +203,18 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
   background-position: top 0% right 80%;
   background-size: contain, contain;
   transition: background-image 1s;
+
+  @include media-breakpoint-up(lg) {
+    // perspective: $perspective;
+  }
 }
 
 .parallax_wrapper.target-is-active {
   background-image: url(../img/banner-bg.jpg), url(../img/banner-r-bg.jpg);
+  background-attachment: fixed, auto;
+  background-repeat: no-repeat, repeat, no-repeat;
+  background-position: top 0% right 80%;
+  background-size: contain, contain;
   transition: background-image 1s;
   // animation: changeBg 2s forwards;
 }
@@ -219,7 +229,7 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
   height: 100%;
   width: 100%;
   opacity: 0;
-  transition: opacity 0.3s ease-in,
+  // transition: opacity 0.3s ease-in,
 }
 
 // .bgblur.target-is-active {
@@ -251,7 +261,7 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
   position: absolute;
   transform-origin: left top;
   transform: translateZ(-30px) scale(0.6);
-  top: -40%;
+  top: -45%;
   left: 70%;
 }
 
@@ -259,7 +269,7 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
   position: absolute;
   transform-origin: left top;
   transform: translateZ(-21px) scale(0.6);
-  top: -40%;
+  top: -50%;
   left: -10%;
 }
 
@@ -267,7 +277,7 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
   position: absolute;
   transform-origin: left top;
   transform: translateZ(-25px) scale(0.6);
-  top: -30%;
+  top: -55%;
   left: 35%;
 }
 
@@ -304,6 +314,20 @@ $n-scaleZ: calc(1 + (($n-translateZ * -1) / $perspective));
 
 #we.target-is-active {
   transform: translate3d(-10px, 0px, 5px);
+  opacity: 1;
+  transition: 1s cubic-bezier(.69,.46,.56,1.42);
+}
+
+#price {
+  transform-origin: center right;
+  transform: translate3d(-200px, 0px, 5px);
+  opacity: 0;
+  transition: 0.3s linear,
+  // transform: translateZ($n-translateZ) translateY(20px) scale($n-scaleZ);
+}
+
+#price.target-is-active {
+  transform: translate3d(10px, 0px, 5px);
   opacity: 1;
   transition: 1s cubic-bezier(.69,.46,.56,1.42);
 }
@@ -406,10 +430,74 @@ $dur: 25s;
   animation: marqueeR $dur calc($dur/2) linear infinite;
 }
 
+.callback {
+  transform-origin: bottom center;
+  // transform: translate3d(-150px, -500px, 5px);
+  animation: fade-in 1s 2s both;
+}
 
-.callme {
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-  width: 12vmax;
+@keyframes fade-in {
+  from {
+      transform: translate3d(550px, -500px, 5px);
+  }
+  to {
+      transform: translate3d(-150px, -500px, 5px);
+  }
+}
+
+
+/* Define the shape and color of the hamburger lines */
+.navbar-toggler span {
+    display: block;
+    background-color: #4f4f4f;
+    height: 3px;
+    width: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    position: relative;
+    left: 0;
+    opacity: 1;
+    transition: all 0.35s ease-out;
+    transform-origin: center left;
+}
+
+
+/* top line needs a little padding */
+.navbar-toggler span:nth-child(1) {
+    margin-top: 0.3em;
+}
+
+/**
+ * Animate collapse into X.
+ */
+
+/* top line rotates 45 degrees clockwise and moves up and in a bit to close the center of the X in the center of the button */
+.navbar-toggler:not(.collapsed) span:nth-child(1) {
+    transform: translate(15%, -33%) rotate(45deg);
+}
+/* center line goes transparent */
+.navbar-toggler:not(.collapsed) span:nth-child(2) {
+    opacity: 0;
+}
+/* bottom line rotates 45 degrees counter clockwise, in, and down a bit to close the center of the X in the center of the button  */
+.navbar-toggler:not(.collapsed) span:nth-child(3) {
+    transform: translate(15%, 33%) rotate(-45deg) ;
+}
+
+
+/**
+ * Animate collapse open into hamburger menu
+ */
+
+/* top line moves back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(1) {
+    transform: translate(0%, 0%) rotate(0deg) ;
+}
+/* middle line goes back to regular color and opacity */
+.navbar-toggler span:nth-child(2) {
+    opacity: 1;
+}
+/* bottom line goes back to initial position and rotates back to 0 degrees */
+.navbar-toggler span:nth-child(3) {
+    transform: translate(0%, 0%) rotate(0deg) ;
 }

@@ -96,21 +96,81 @@
                     <img src="img/logo.svg" class="icon me-2" alt="logo">
                     <span class="fs-4">СевХолСервис</span>
                </a>
+               <a class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
+                 <!-- these spans become the three lines -->
+                 <span> </span>
+                 <span> </span>
+                 <span> </span>
+               </a>
           </div>
      </nav>
-     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-  Launch demo modal
-     </button>
      <div class="position-relative">
+          <div class="row" id="callbackCard">
+               <div class="offset-xxl-9 col-xxl-3 offset-xl-8 col-xl-4 d-none d-xl-block position-absolute" >
+                    <div class="position-relative callback">
+                    <div class="cardblur d-none d-lg-block"></div>
+                    <div class="card">
+                         <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+                                   <div class="card-header d-flex align-items-center justify-content-between">
+                                        <div>
+                                             <h4>Заказать обратный звонок</h4>
+                                             <h5>Перезвоним в течение получаса</h5>
+                                        </div>
+                                        <button onclick="applyClass()" type="button" class="btn-close" aria-label="Close"></button>
+                                   </div>
+                                   <div class="card-body">
+                                        <label for="name" class="form-label">Как к Вам обращаться:</label>
+                                        <div class="input-group mb-3">
+                                             <input type="text" autocomplete="name" placeholder="Николай Николаевич" id="name" aria-label="Name" class="form-control" required>
+                                        </div>
+                                        <label for="tel" class="form-label">Ваш номер телефона:</label>
+                                        <div class="input-group mb-3">
+                                             <span class="input-group-text" id="basic-addon1">+7</span>
+                                             <input class="formatted-phoneCard" placeholder="123 456 78 90" type="tel" id="tel" required>
+                                        </div>
+                                        <label class="form-label">Способ связи:</label>
+                                        <div class="mb-3">
+                                             <div class="form-check form-check-inline" id="contactType">
+                                                  <input class="form-check-input" type="radio" name="contactType" value="whatsapp" id="radio_whatsapp" checked>
+                                                  <label class="form-check-label" for="radio_whatsapp">
+                                                       <img class="icon" src="img/WhatsApp.svg" alt="whatsapp logo"> WhatsApp
+                                                  </label>
+                                             </div>
+                                             <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" name="contactType" value="telegram" id="radio_telegram">
+                                                  <label class="form-check-label" for="radio_telegram">
+                                                       <img class="icon" alt="telegram logo" src="img/Telegram.svg"> Telegram
+                                                  </label>
+                                             </div>
+                                             <div class="form-check form-check-inline">
+                                                  <input class="form-check-input" type="radio" name="contactType" value="phone" id="radio_phone">
+                                                  <label class="form-check-label" for="radio_phone">
+                                                       <img class="icon" alt="phone logo" src="img/phone.svg"> Мобильный
+                                                  </label>
+                                             </div>
+                                        </div>
+                                        <label for="email_form" class="col-form-label col-form-label-sm">Email (не обязательно):</label>
+                                        <input type="email" class="form-control form-control-sm" name="email" id="email_form" placeholder="name@example.com">
+                                   </div>
+                                   <div class="card-footer">
+                                        <div class=" d-flex flex-sm-row align-content-end">
+                                             <small class = "quet">Нажимая “Отправить”, Вы соглашаетесь с <a href="url">политикой обработки персональных данных</a>.</small>
+                                             <button type="submit" class="btn btn-primary">Отправить</button>
+                                        </div>
+                                   </div>
+                              </form>
+                         </div>
+                    </div>
+               </div>
+          </div>
           <div class="d-none d-lg-block bgblur"></div>
           <div class="d-block d-lg-none bgblur-easy"></div>
           <!-- masters big -->
           <section class="position-relative container d-none d-sm-block py-5">
-               <div class="rounded cardblur"></div>
+               <div class="rounded cardblur d-none d-lg-block"></div>
                <div class="row g-0">
                     <div class="card text-dark">
                          <div class="card-body p-5">
-                              <!-- TODO AOS -->
                                <figure id="brothers-aos" class="ms-5 w-50 float-end ">
                                    <div class="position-relative">
                                         <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
@@ -156,15 +216,15 @@
                <div class="row gy-3 parallax-cards">
                     <div class="col-lg-6">
                          <div class="card bg-transparent text-dark">
-                              <div class="rounded cardblur"></div>
-                              <h2 class="card-header text-center">
+                              <div class="rounded cardblur d-none d-lg-block"></div>
+                              <h3 class="card-header text-center">
                               <svg class="icon me-2" width="30" height="30">
                                    <use xlink:href="#wrench"></use>
                               </svg>
                               Детали от поставщика
-                              </h2>
+                              </h3>
                               <div class="card-body">
-                                   <ul class="list-group list-group-flush fs-4">
+                                   <ul class="list-group list-group-flush fs-5">
                                         <li class="list-group-item">У нас всегда есть  оригинальные запчасти в наличии и под заказ</li>
                                         <li class="list-group-item">Всегда выбираем лучший для вас вариант - ремонт старой детали или замену на новую</li>
                                    </ul>
@@ -173,15 +233,15 @@
                     </div>
                     <div class="offset-lg-3 col-lg-7">
                          <div class="card bg-transparent text-dark">
-                              <div class="rounded cardblur"></div>
-                              <h2 class="card-header text-center">
+                              <div class="rounded cardblur d-none d-lg-block"></div>
+                              <h3 class="card-header text-center">
                               <svg class="icon me-2" width="30" height="30">
                                    <use xlink:href="#clock"></use>
                               </svg>
                               Ремонт в тот же день
-                              </h2>
+                              </h3>
                               <div class="card-body">
-                                   <ul class="list-group list-group-flush fs-4">
+                                   <ul class="list-group list-group-flush fs-5">
                                         <li class="list-group-item">В большинстве случаев мастер приедет в день обращения</li>
                                         <li class="list-group-item">По нашей статистике, чаще всего ремонт производится после одного посещения мастера, все необходимые запчасти у него с собой</li>
                                         <li class="list-group-item">Мы <strong>всегда</strong> доводим ремонт до конца</li>
@@ -191,15 +251,15 @@
                     </div>
                     <div class="offset-lg-7 col-lg-5">
                          <div class="card bg-transparent text-dark">
-                              <div class="rounded cardblur"></div>
-                              <h2 class="card-header text-center">
+                              <div class="rounded cardblur d-none d-lg-block"></div>
+                              <h3 class="card-header text-center">
                               <svg class="icon me-2" width="30" height="30">
                                    <use xlink:href="#shield"></use>
                               </svg>
                               Бесплатная диагностика и гарантия
-                              </h2>
+                              </h3>
                               <div class="card-body">
-                                   <ul class="list-group list-group-flush fs-4">
+                                   <ul class="list-group list-group-flush fs-5">
                                         <li class="list-group-item">Выезд мастера всегда <strong>бесплатный</strong></li>
                                         <li class="list-group-item">Если вы согласны на ремонт, то диагностика мастера для вас бесплатна</li>
                                         <li class="list-group-item">Гарантия на запчасти <strong>до полугода</strong> </li>
@@ -212,20 +272,20 @@
           <!-- WE -->
           <section class="container mt-2">
                <div class="text-dark">
-                    <div class="row g-0">
-                         <div class="col-lg-4 order-lg-2 rounded">
-                              <div class="position-relative d-flex align-items-center" style="width: 100%; height: 100%;">
-                                   <img src="img/door.png" alt="" class="d-lg-block d-none" style="position: absolute; width: 100%; transform-origin: center left; transform: translate3d(50px, 0px, -10px) scale3d(1.1, 1.1, 1.0);">
-                                   <div class="card border-primary border border-5 rounded-5 mx-3" id="we">
-                                        <div class="cardblur rounded-5"></div>
+                    <div class="row align-items-stretch g-0">
+                         <div class="col-lg-4 d-flex align-items-center order-lg-2 rounded">
+                              <div class="position-relative d-flex align-items-center py-5" >
+                                   <img src="img/door.png" alt="" class="d-lg-block d-none" style="position: absolute; width: 80%; transform-origin: center left; transform: translate3d(50px, 0px, -10px) scale3d(1.1, 1.1, 1.0);">
+                                   <div class="card border-primary border border-5 rounded-5 m-4" id="we">
+                                        <div class="cardblur d-none d-lg-block rounded-5"></div>
                                         <h3 class="p-3 position-relative">Мы ремонтируем все марки холодильников, вот некоторые из них</h3>
                                    </div>
                               </div>
                          </div>
                          <div class="col card bg-transparent order-lg-1 position-relative m-2">
-                              <div class="cardblur rounded"></div>
+                              <div class="cardblur d-none d-lg-block rounded"></div>
                               <div class="container">
-                                   <div class="align-items-center text-center" style="transform: translateZ(0px)">
+                                   <div class="align-items-center text-center">
                                         <div class="marqueeL">
                                              <div class="row">
                                                   <div class="col"><img src="img/logos-01.png" alt="Ariston (Аристон)" class="img-fluid"></div>
@@ -270,188 +330,25 @@
                </div>
           </section>
           <!-- Table -->
-          <section class="container position-relative ">
-               <div class="rounded cardblur"></div>
-               <table class="table table-hover fs-md-3" style="transform: translateZ(0px)">
-                 <thead>
-                   <tr>
-                     <th scope="col">#</th>
-                     <th scope="col">Услуга</th>
-                     <th scope="col">Цена</th>
-                   </tr>
-                 </thead>
-                    <tbody>
-                         <tr>
-                              <th scope="row">1</th>
-                              <td>Диагностика (с использованием х/а)</td>
-                              <td>500(1200) р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">2</th>
-                              <td>Заправка холодильного агрегата хладагентом</td>
-                              <td>2000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">3</th>
-                              <td>Заправка холодильного агрегата хладагентом (R600a – взрывоопасный газ !!!)</td>
-                              <td>2500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">4</th>
-                              <td>Установка заправочного узла (клапан Шредера) *</td>
-                              <td>1000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">5</th>
-                              <td>Замена фильтра осушителя (силикагель, цианид) *</td>
-                              <td>1000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">6</th>
-                              <td>Ремонт испарителя «капельного типа» *</td>
-                              <td>5000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">7</th>
-                              <td>Ремонт испарителя «no frost» *</td>
-                              <td>2500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">8</th>
-                              <td>Замена испарителя капельного типа * **</td>
-                              <td>5000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">9</th>
-                              <td>Замена испарителя «no frost» * **</td>
-                              <td>2500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">10</th>
-                              <td>Установка конденсатора холодильного агрегата* **</td>
-                              <td>2500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">11</th>
-                              <td>Прочистка капиллярного трубопровода* **</td>
-                              <td>2000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">12</th>
-                              <td>Замена капиллярного трубопровода* **</td>
-                              <td>3000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">13</th>
-                              <td>Удаление влаги в системе холодильного агрегата (вакуум, азот(N2)) * **</td>
-                              <td>1000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">14</th>
-                              <td>Замена мотор-компрессора (монтаж-демонтаж) * **</td>
-                              <td>3500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">15</th>
-                              <td>Расходные материалы при капитальном ремонте (серебро, трубопровод, фильтра, заправочные узлы) ***</td>
-                              <td>от 1000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">16</th>
-                              <td>Диагностика</td>
-                              <td>500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">17</th>
-                              <td>Диагностика системы «no frost» (сборка- разборка) ***</td>
-                              <td>1200р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">18</th>
-                              <td>Мелкий ремонт (замена шнура питания, кнопки, выключателя, замена петель, и т.д.) ***</td>
-                              <td>от 1500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">19</th>
-                              <td>Замена пускозащитного реле **</td>
-                              <td>3000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">20</th>
-                              <td>Замена терморегулятора **</td>
-                              <td>3000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">21</th>
-                              <td>Замена датчика **</td>
-                              <td>3500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">22</th>
-                              <td>Замена таймера **</td>
-                              <td>3000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">23</th>
-                              <td>Замена нагревателя **</td>
-                              <td>3500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">24</th>
-                              <td>Замена плавкого предохранителя **</td>
-                              <td>3500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">25</th>
-                              <td>Замена дефростера **</td>
-                              <td>3500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">26</th>
-                              <td>Замена мотор-вентилятора **</td>
-                              <td>3500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">27</th>
-                              <td>Ремонт платы управления ***</td>
-                              <td>от 7000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">28</th>
-                              <td>Ремонт-восстановление эл.цепи ***</td>
-                              <td>от 1500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">29</th>
-                              <td>Прочистка дренажной системы (системы no frost)</td>
-                              <td>2000р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">30</th>
-                              <td>Замена уплотнительной резины (одна камера) ***</td>
-                              <td>2500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">31</th>
-                              <td>Ремонт, восстановление теплоизоляции холодильного шкафа (одна камера) ***</td>
-                              <td>2500р</td>
-                         </tr>
-                         <tr>
-                              <th scope="row">32</th>
-                              <td>Перенавеска дверей холодильного шкафа ***</td>
-                              <td>от 2500р</td>
-                         </tr>
-                         <tr>
-                              <td colspan="3" style="white-space: pre-line;"><small class="quet">Примечания:
-                              <b>*</b> без заправки х/а
-                              <b>**</b> без учета стоимости материала и запасных частей
-                              <b>***</b> зависит от сложности
-                              <b>****</b> Диагностика при отказе от ремонта или при невозможности ремонта по независящим от мастера причинам -  500 рублей.
-                              При осуществлении ремонта - диагностика бесплатно.</small>
-                              </td>
-                         </tr>
-                    </tbody>
-               </table>
+          <section class="container position-relative p-5">
+               <div class="row">
+                    <div class="col-md-6 d-flex align-items-center align-self-stretch p-4 position-relative">
+                         <img src="img/fridge.gif" alt="" class="d-lg-block d-none" style="position: absolute; width: 100%; transform-origin: center left; transform: translate3d(0px, 0px, -10px) scale3d(1, 1, 1.0);">
+                         <div class="card text-center border-primary border border-5 rounded-5" id="price">
+                              <div class="cardblur d-none d-lg-block rounded-5"></div>
+                              <h3 class="p-3 position-relative">Ознакомьтесь с нашим прайс листом:</h3>
+                         </div>
+                    </div>
+                    <div class="col-md-4 p-5">
+                         <div class="position-relative text-center">
+                              <img src="img/clipboard_empty.png" alt="clipboard" class="w-100">
+                              <a data-bs-toggle="modal" data-bs-target="#priceModal" class="link link-dark" id="modal_link" style="text-decoration: none;">
+                                   <div class="clipboard"></div>
+                                   <h4 style="transform: rotate3d(0, 1, 0, -1.5deg) translate3d(20px, -60px, 4px);">Прайс-лист</h4>
+                              </a>
+                         </div>
+                    </div>
+               </div>
           </section>
           </div>
 <footer class="d-flex bg-light flex-sm-row justify-content-between align-items-center">
@@ -494,14 +391,21 @@
      </ul>
 </footer>
 </div>
-     <div class="callme">
-          <img src="img/callme.png" alt="" class="img-fluid">
-     </div>
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="callme">
+     <a data-bs-toggle="modal" data-bs-target="#callbackModal" class="link" id="modal_link">
+          <div class="coin">
+               <div class="coin_front"></div>
+          </div>
+     </a>
+</div>
+<div class="modal fade" id="callbackModal" tabindex="-1" aria-labelledby="callbackModalLabel" aria-hidden="true">
      <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
           <div class="modal-content">
                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Заказать обратный звонок</h5>
+                    <div>
+                    <h4 class="modal-title" id="exampleModalLabel">Заказать обратный звонок</h4>
+                    <h5>Перезвоним в течение получаса</h5>
+                    </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
@@ -550,10 +454,15 @@
      </div>
 </div>
 
-<div class="modal fade modal-dialog modal-dialog-scrollable" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" class="" id="exampleModal2">
-     <div class="modal-dialog modal-dialog-centered modal-fullscreen-sm-down">
-          <div class="modal-content">
-               <table class="table table-hover fs-md-3">
+<div class="modal fade" id="priceModal" tabindex="-1" aria-labelledby="priceModalLabel" aria-hidden="true">
+     <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Прайс-лист</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+               <table class="table table-hover" style="transform: translateZ(0px)">
                  <thead>
                    <tr>
                      <th scope="col">#</th>
@@ -733,8 +642,12 @@
                          </tr>
                     </tbody>
                </table>
-          </div>
-     </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
 </div>
 
 <script src="script.js"></script>
