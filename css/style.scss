@@ -64,36 +64,13 @@ $utilities:
       values: $font-sizes,
       responsive: true
     ),
+
+      "position": (
+      property: position,
+      values: static relative absolute fixed sticky,
+      responsive: true
+    ),
 );
-
-
-
-
-// $enable-shadows: true;
-.navbar-icon {
-  height: 8vmin;
-  width: 8vmin;
-}
-
-.navbar-icon + span {
-  font-size: 4vmin;
-  -webkit-text-stroke: 0.03em map-get($theme-colors, "dark");
-}
-
-.navbar-number {
-  font-family: 'Jura', sans-serif;
-  font-size: 2.5vmin;
-}
-
-.icon {
-  height: 1.5em;
-  width: 1.5em;
-}
-
-.navbar-number .icon {
-  height: 1em;
-  width: 1em;
-}
 
 .card .icon{
     height: 1.5em;
@@ -145,6 +122,35 @@ footer #logo {
 footer .icon:hover {
   fill: rgba(252, 247, 248, 1);
   transition-duration: 0.5s;
+}
+
+.navbar-icon {
+  height: 8vmin;
+  width: 8vmin;
+}
+
+.navbar-icon + span {
+  font-size: 4vmin;
+  -webkit-text-stroke: 0.03em map-get($theme-colors, "dark");
+}
+
+.navbar-number {
+  font-family: 'Jura', sans-serif;
+  font-size: 2.3vmax;
+
+  @include media-breakpoint-up(lg) {
+    font-size: 2.5vmin;
+  }
+}
+
+.icon {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.navbar-number .icon {
+  height: 1em;
+  width: 1em;
 }
 
 #b-icon {
@@ -200,10 +206,10 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
   background-image: url(../img/banner.jpg), url(../img/banner-r.jpg);
   background-attachment: fixed, auto;
   background-repeat: no-repeat, repeat, no-repeat;
-  background-position: top 0% right 80%;
+  background-position: top 0% right 80%, top 0% right 80%;
   background-size: contain, contain;
-  transition: background-image 1s;
-
+  // transition: background-image 1s;
+  // animation: changeBg 1s reverse;
   @include media-breakpoint-up(lg) {
     // perspective: $perspective;
   }
@@ -211,12 +217,12 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
 
 .parallax_wrapper.target-is-active {
   background-image: url(../img/banner-bg.jpg), url(../img/banner-r-bg.jpg);
-  background-attachment: fixed, auto;
-  background-repeat: no-repeat, repeat, no-repeat;
-  background-position: top 0% right 80%;
-  background-size: contain, contain;
+  // background-attachment: fixed, auto;
+  // background-repeat: no-repeat, repeat, no-repeat;
+  // background-position: top 0% right 80%, top 0% right 0%;
+  // background-size: contain, contain;
   transition: background-image 1s;
-  // animation: changeBg 2s forwards;
+  // animation: changeBg 1s forwards;
 }
 
 @keyframes changeBg{
@@ -238,6 +244,14 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
 // }
 
 .bgblur-easy {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backdrop-filter: blur(80px);
+  -webkit-backdrop-filter: blur(80px);
+}
+
+.bgblur-easy2 {
   position: absolute;
   height: 100%;
   width: 100%;
@@ -432,8 +446,14 @@ $dur: 25s;
 
 .callback {
   transform-origin: bottom center;
-  // transform: translate3d(-150px, -500px, 5px);
-  animation: fade-in 1s 2s both;
+
+  @include media-breakpoint-up(lg) {
+    transform: translate3d(0px, 0px, 5px);
+  }
+
+  @include media-breakpoint-up(xl) {
+    animation: fade-in 1s 0s both;
+  }
 }
 
 @keyframes fade-in {
@@ -442,6 +462,12 @@ $dur: 25s;
   }
   to {
       transform: translate3d(-150px, -500px, 5px);
+  }
+}
+
+.overflow-hidden-sm {
+  @include media-breakpoint-down(sm) {
+      overflow: hidden;
   }
 }
 
