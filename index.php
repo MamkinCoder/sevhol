@@ -58,12 +58,17 @@
      <symbol id="geo" viewBox="0 0 16 16">
      <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
      </symbol>
+     <symbol id="phone" viewBox="0 0 16 16">
+     <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+     </symbol>
 </svg>
 <div class="parallax_wrapper">
-     <div class="container">
-          <nav class="m-2 position-absolute navbar navbar-expand navbar-light">
+     <div class="position-relative">
+          <div class="position-absolute w-100">
+               <nav class="navbar navbar-expand-lg navbar-light w-100">
+                    <div class="container">
                     <div class="d-flex align-items-center">
-                         <a class="d-flex navbar-brand align-items-center opacity-75" href="#">
+                         <a class="d-flex navbar-brand align-items-center opacity-75" href="/">
                               <img src="img/logo.svg" class="navbar-icon me-2" alt="logo">
                               <span class="lh-1">СевХол<br>Сервис</span>
                          </a>
@@ -80,31 +85,54 @@
                               </div>
                          </div>
                     </div>
-                   <!--  <ul class="navbar-nav">
-                         <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-                         <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
-                         <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-                         <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-                         <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                    </ul> -->
-          </nav>
+                    <button class="navbar-toggler collapsed me-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                      <span> </span>
+                      <span> </span>
+                      <span> </span>
+                    </button>
+                         <div class="collapse navbar-collapse" id="navbarToggler">
+                                   <ul class="navbar-nav ms-auto">
+                                        <li class="nav-item"><a href="#about" class="nav-link" aria-current="page"><div class="nav-div">О нас</div></a></li>
+                                        <li class="nav-item"><a href="#benefits" class="nav-link"><div class="nav-div">Преимущества</div></a></li>
+                                        <li class="nav-item"><a href="#models" class="nav-link"><div class="nav-div">Что мы ремонтируем</div></a></li>
+                                        <li class="nav-item"><a data-bs-toggle="modal" data-bs-target="#priceModal" href="#" class="nav-link"><div class="nav-div">Прайс-лист</div></a></li>
+                                        <li class="nav-item"><a href="tel:+79785046000" class="nav-link"><div class="nav-div"><svg class="icon me-2">
+                                   <use xlink:href="#phone"></use>
+                              </svg>Звонок</div></a></li>
+                                   </ul>
+                         </div>
+                    </div>
+               </nav>
+          </div>
      </div>
+
      <img src="img/banner-min.jpg" class="invisible" alt="" style="max-height: 80vh; max-width: 100vw;">
-     <nav id="navbar-aos" class="navbar navbar-expand sticky-top bg-light navbar-light">
+     <nav id="navbar-aos" class="navbar navbar-expand-lg align-items-center sticky-top bg-light navbar-light">
           <div class="container">
                <a href="/" class="d-flex align-items-center navbar-brand">
                     <img src="img/logo.svg" class="icon me-2" alt="logo">
                     <span class="fs-4">СевХолСервис</span>
                </a>
-               <a class="navbar-toggler collapsed border-0" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
-                 <!-- these spans become the three lines -->
-                 <span> </span>
-                 <span> </span>
-                 <span> </span>
-               </a>
+               <button class="navbar-toggler collapsed me-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+                      <span> </span>
+                      <span> </span>
+                      <span> </span>
+               </button>
+
+               <div class="collapse navbar-collapse" id="collapsingNavbar">
+                              <ul class="navbar-nav ms-auto">
+                                   <li class="nav-item"><a href="#about" class="nav-link">О нас</a></li>
+                                   <li class="nav-item"><a href="#benefits" class="nav-link">Преимущества</a></li>
+                                   <li class="nav-item"><a href="#models" class="nav-link">Что мы ремонтируем</a></li>
+                                   <li class="nav-item"><a data-bs-toggle="modal" data-bs-target="#priceModal" href="#" class="nav-link">Прайс-лист</a></li>
+                                   <li class="nav-item"><a href="tel:+79785046000" class="nav-link"><div class="nav-div"><svg class="icon me-2">
+                                   <use xlink:href="#phone"></use>
+                              </svg>Звонок</div></a></li>
+                              </ul>
+                    </div>
           </div>
      </nav>
-     <div class="position-relative overflow-hidden-sm">
+     <div class="position-relative overflow-hidden-lg">
           <div class="d-none d-lg-block bgblur"></div>
           <div class="position-relative">
                <div class="d-block d-lg-none bgblur-easy2"></div>
@@ -169,8 +197,9 @@
                </div>
           </div>
           <div class="d-block d-lg-none bgblur-easy"></div>
+          <section id="about">
           <!-- masters big -->
-          <section class="container d-none d-sm-block py-5">
+          <div class="container d-none d-sm-block py-5">
                <div class="position-relative row g-0">
                     <div class="rounded cardblur d-none d-lg-block"></div>
                     <div class="card text-dark">
@@ -187,10 +216,10 @@
                          </div>
                     </div>
                </div>
-          </section>
+          </div>
           <!-- masters small -->
-          <section class="d-block d-sm-none mb-3">
-               <div class="row g-0">
+          <div class="d-block d-sm-none mb-3">
+               `<div class="row g-0">
                     <div class="col-xl col-lg card border-0 align-items-center">
                          <div class="card-body p-1">
                               <h1 class="display-4 p-2 text-center fw-bold">О нас</h1>
@@ -205,16 +234,17 @@
                          </div>
                     </div>
                </div>
+          </div>
           </section>
           <!-- cards -->
-          <section class="container position-relative">
-               <div class="parallax-wrench aos d-none d-sm-block">
+          <section class="container position-relative" id="benefits">
+               <div class="parallax-wrench aos d-none d-lg-block">
                     <img src="img/t-wrench.png" alt="wrench" class="">
                </div>
-               <div class="parallax-clock aos d-none d-sm-block">
+               <div class="parallax-clock aos d-none d-lg-block">
                     <img src="img/t-clock.png" alt="clock" class="">
                </div>
-               <div class="parallax-shield aos d-none d-sm-block">
+               <div class="parallax-shield aos d-none d-lg-block">
                     <img src="img/t-shield.png" alt="shield" class="">
                </div>
                <div class="row gy-3 parallax-cards">
@@ -222,7 +252,7 @@
                          <div class="card bg-transparent text-dark">
                               <div class="rounded cardblur d-none d-lg-block"></div>
                               <h3 class="card-header text-center">
-                              <svg class="icon me-2" width="30" height="30">
+                              <svg class="icon me-2">
                                    <use xlink:href="#wrench"></use>
                               </svg>
                               Детали от поставщика
@@ -239,7 +269,7 @@
                          <div class="card bg-transparent text-dark">
                               <div class="rounded cardblur d-none d-lg-block"></div>
                               <h3 class="card-header text-center">
-                              <svg class="icon me-2" width="30" height="30">
+                              <svg class="icon me-2">
                                    <use xlink:href="#clock"></use>
                               </svg>
                               Ремонт в тот же день
@@ -257,7 +287,7 @@
                          <div class="card bg-transparent text-dark">
                               <div class="rounded cardblur d-none d-lg-block"></div>
                               <h3 class="card-header text-center">
-                              <svg class="icon me-2" width="30" height="30">
+                              <svg class="icon me-2">
                                    <use xlink:href="#shield"></use>
                               </svg>
                               Бесплатная диагностика и гарантия
@@ -274,13 +304,13 @@
                </div>
           </section>
           <!-- WE -->
-          <section class="container mt-2">
+          <section class="container mt-2" id="models">
                <div class="text-dark">
                     <div class="row align-items-stretch g-0">
                          <div class="col-lg-4 d-flex align-items-center order-lg-2 rounded">
                               <div class="position-relative d-flex align-items-center py-5" >
                                    <img src="img/door.png" alt="" class="d-lg-block d-none" style="position: absolute; width: 80%; transform-origin: center left; transform: translate3d(50px, 0px, -10px) scale3d(1.1, 1.1, 1.0);">
-                                   <div class="card border-primary border border-5 rounded-5 m-4" id="we">
+                                   <div class="card border-primary border border-5 rounded-5" id="we">
                                         <div class="cardblur d-none d-lg-block rounded-5"></div>
                                         <h3 class="p-3 position-relative">Мы ремонтируем все марки холодильников, вот некоторые из них</h3>
                                    </div>
@@ -334,10 +364,10 @@
                </div>
           </section>
           <!-- Table -->
-          <section class="container position-relative p-5">
-               <div class="row">
-                    <div class="col-md-6 d-flex align-items-center align-self-stretch p-4 position-relative">
-                         <img src="img/fridge.gif" alt="" class="d-lg-block d-none" style="position: absolute; width: 100%; transform-origin: center left; transform: translate3d(0px, 0px, -10px) scale3d(1, 1, 1.0);">
+          <section class="container position-relative py-5">
+               <div class="row g-0">
+                    <div class="col-md-6 d-flex align-items-center align-self-stretch position-relative">
+                         <img src="img/fridge.gif" alt="" class="d-md-block d-none" style="position: absolute; width: 100%; transform-origin: center left; transform: translate3d(0px, 0px, -10px) scale3d(1, 1, 1.0);">
                          <div class="card text-center border-primary border border-5 rounded-5" id="price">
                               <div class="cardblur d-none d-lg-block rounded-5"></div>
                               <h3 class="p-3 position-relative">Ознакомьтесь с нашим прайс листом:</h3>
@@ -348,56 +378,59 @@
                               <img src="img/clipboard_empty.png" alt="clipboard" class="w-100">
                               <a data-bs-toggle="modal" data-bs-target="#priceModal" class="link link-dark" id="modal_link" style="text-decoration: none;">
                                    <div class="clipboard"></div>
-                                   <h4 style="transform: rotate3d(0, 1, 0, -1.5deg) translate3d(20px, -60px, 4px);">Прайс-лист</h4>
+                                   <h4 style="transform: rotate3d(0, 1, 0, -1.5deg) translate3d(20px, -20px, 4px);">Прайс-лист</h4>
                               </a>
                          </div>
                     </div>
                </div>
           </section>
           </div>
-<footer class="d-flex bg-light flex-sm-row justify-content-between align-items-center">
-     <div class="d-flex align-items-center">
-          <a href="/" class="">
-               <img src="img/logo.svg" class="icon" id="logo" alt="logo">
-          </a>
-          <span class="ms-2">
-               © 2023 год "СевХолСервис" <br> powered by
-               <a href="https://getbootstrap.com">
-                    <svg id="b-icon" class="icon footer-shine">
-                         <use xlink:href="#bootstrap-outline"></use>
-                    </svg>
+<footer class="bg-light text-dark" id="footer">
+          <div class="container pt-2"> <hr></div>
+          <div class="d-flex justify-content-around align-items-center">
+          <div class="d-flex align-items-center">
+               <a href="/" class="">
+                    <img src="img/logo.svg" class="icon" id="logo" alt="logo">
                </a>
-          </span>
-     </div>
-     <ul class="nav justify-content-end list-unstyled d-flex">
-          <li class="mx-2">
-               <a href="#">
-                    <svg class="icon footer-shine">
-                         <use xlink:href="#whatsapp-outline"></use>
-                    </svg>
-               </a>
-          </li>
-          <li class="mx-2">
-               <a href="#">
-                    <svg class="icon footer-shine">
-                         <use xlink:href="#telegram-outline"></use>
-                    </svg>
-               </a>
-          </li>
-          <!-- TODO -->
-          <li class="ms-2">
-               <a href="mailto:skv@ngs.ru">
-                    <svg class="icon footer-shine" width="30" height="30">
-                         <use xlink:href="#envelope"></use>
-                    </svg>
-               </a>
-          </li>
-     </ul>
+               <span class="ms-2">
+                    © 2023 год "СевХолСервис" <br> powered by
+                    <a href="https://getbootstrap.com" target="_blank">
+                         <svg id="b-icon" class="icon">
+                              <use xlink:href="#bootstrap-outline"></use>
+                         </svg>
+                    </a>
+               </span>
+          </div>
+          <ul class="align-items-center list-unstyled d-flex m-2">
+               <li class="mx-2">
+                    <a href="#">
+                         <svg class="icon" id="whatsapp">
+                              <use xlink:href="#whatsapp-outline"></use>
+                         </svg>
+                    </a>
+               </li>
+               <li class="mx-2">
+                    <a href="#">
+                         <svg class="icon" id="telegram">
+                              <use xlink:href="#telegram-outline"></use>
+                         </svg>
+                    </a>
+               </li>
+               <!-- TODO -->
+               <li class="ms-2">
+                    <a href="mailto:sevholservice7@gmail.com">
+                         <svg class="icon"">
+                              <use xlink:href="#envelope"></use>
+                         </svg>
+                    </a>
+               </li>
+          </ul>
+          </div>
 </footer>
 </div>
 <div class="callme">
      <a data-bs-toggle="modal" data-bs-target="#callbackModal" class="link" id="modal_link">
-          <div class="coin">
+          <div class="coin" id="coin">
                <div class="coin_front"></div>
           </div>
      </a>
@@ -414,38 +447,38 @@
                </div>
                <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                     <div class="modal-body">
-                         <label for="name" class="form-label">Как к Вам обращаться:</label>
+                         <label for="name2" class="form-label">Как к Вам обращаться:</label>
                          <div class="input-group mb-3">
-                              <input type="text" autocomplete="name" placeholder="Николай Николаевич" id="name" aria-label="Name" class="form-control" required>
+                              <input type="text" autocomplete="name" placeholder="Николай Николаевич" id="name2" aria-label="Name" class="form-control" required>
                          </div>
-                         <label for="tel" class="form-label">Ваш номер телефона:</label>
+                         <label for="tel2" class="form-label">Ваш номер телефона:</label>
                          <div class="input-group mb-3">
                               <span class="input-group-text" id="basic-addon1">+7</span>
-                              <input class="formatted-phone" placeholder="123 456 78 90" type="tel" id="tel" required>
+                              <input class="formatted-phone" placeholder="123 456 78 90" type="tel" id="tel2" >
                          </div>
                          <label class="form-label">Способ связи:</label>
-                         <div class="mb-3">
-                              <div class="form-check form-check-inline" id="contactType">
-                                   <input class="form-check-input" type="radio" name="contactType" value="whatsapp" id="radio_whatsapp" checked>
-                                   <label class="form-check-label" for="radio_whatsapp">
+                         <div class="mb-3 position-relative">
+                              <div class="form-check form-check-inline" id="contactType2">
+                                   <input class="form-check-input" type="radio" name="contactType" value="whatsapp" id="radio_whatsapp2" checked>
+                                   <label class="form-check-label" for="radio_whatsapp2">
                                         <img class="icon" src="img/WhatsApp.svg" alt="whatsapp logo"> WhatsApp
                                    </label>
                               </div>
                               <div class="form-check form-check-inline">
-                                   <input class="form-check-input" type="radio" name="contactType" value="telegram" id="radio_telegram">
-                                   <label class="form-check-label" for="radio_telegram">
+                                   <input class="form-check-input" type="radio" name="contactType" value="telegram" id="radio_telegram2">
+                                   <label class="form-check-label" for="radio_telegram2">
                                         <img class="icon" alt="telegram logo" src="img/Telegram.svg"> Telegram
                                    </label>
                               </div>
                               <div class="form-check form-check-inline">
-                                   <input class="form-check-input" type="radio" name="contactType" value="phone" id="radio_phone">
-                                   <label class="form-check-label" for="radio_phone">
+                                   <input class="form-check-input" type="radio" name="contactType" value="phone" id="radio_phone2">
+                                   <label class="form-check-label" for="radio_phone2">
                                         <img class="icon" alt="phone logo" src="img/phone.svg"> Мобильный
                                    </label>
                               </div>
                          </div>
-                         <label for="email_form" class="col-form-label col-form-label-sm">Email (не обязательно):</label>
-                         <input type="email" class="form-control form-control-sm" name="email" id="email_form" placeholder="name@example.com">
+                         <label for="email_form2" class="col-form-label col-form-label-sm">Email (не обязательно):</label>
+                         <input type="email" class="form-control form-control-sm" name="email" id="email_form2" placeholder="name@example.com">
                     </div>
                     <div class="modal-footer">
                          <div class=" d-flex flex-sm-row align-content-end">

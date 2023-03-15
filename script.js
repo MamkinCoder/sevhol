@@ -85,18 +85,30 @@ var blur_bg_easy = function(entries, observer) {
     })
 };
 
+var footer = function(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            document.querySelector(".callme").classList.remove(targetActiveClass)
+        } else {
+            // document.querySelector(".callme").classList.add(targetActiveClass)
+        }
+    })
+};
+
 
 // Create our observer
 var observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0% 0px -50% 0px"});
 var navbar_observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0px 0px -100% 0px"});
 var bgblur_observer = new IntersectionObserver(blur_bg, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0px 0px -50% 0px"});
-var bgblureasy_observer = new IntersectionObserver(blur_bg_easy, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0px 0px -50% 0px"});
-var we_observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "-30% 0px -20% 0px"});
+var bgblureasy_observer = new IntersectionObserver(blur_bg_easy, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0% 0px -50% 0px"});
+var footer_callme_remover = new IntersectionObserver(footer, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "0% 0px 0% 0px"});
+var we_observer = new IntersectionObserver(callback, {root: document.querySelector(".parallax_wrapper"), threshold: 0, rootMargin: "-20% 0px -20% 0px"});
 navbar_observer.observe(document.querySelector("#navbar-aos"))
 bgblur_observer.observe(document.querySelector(".bgblur"))
 bgblureasy_observer.observe(document.querySelector(".bgblur-easy"))
 we_observer.observe(document.querySelector("#we"))
 we_observer.observe(document.querySelector("#price"))
+footer_callme_remover.observe(document.querySelector("#footer"))
 targets.forEach(target => {
     observer.observe(target)
 })

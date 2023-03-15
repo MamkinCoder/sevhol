@@ -40,6 +40,10 @@ $card-bg: rgba(map-get($theme-colors, "light"), 0.2);
 
 $table-bg: rgba(map-get($theme-colors, "light"), 0.2);
 
+$navbar-light-disabled-color: rgba(map-get($theme-colors, "dark"), 1);
+$navbar-light-color: rgba(map-get($theme-colors, "dark"), 1);
+$navbar-light-hover-color: rgba(map-get($theme-colors, "primary"), 1);
+
 
 $modal-content-bg: map-get($theme-colors, "light");
 // $modal-content-color:  map-get($theme-colors, "secondary");
@@ -103,25 +107,45 @@ body {
 
 footer {
     color: map-get($theme-colors, "light");
-    color: rgba(252, 247, 248, 0.6);
-
 }
 
 footer .icon{
-    height: 2.5em;
-    width: 2.5em;
-    fill: map-get($theme-colors, "light");
-    fill: rgba(252, 247, 248, 0.6);
+    height: 6vmin;
+    width: 6vmin;
+    max-width: 62px;
+    max-height: 62px;
+    min-width: 30px;
+    min-height: 30px;
+    fill: map-get($theme-colors, "dark");
+}
+
+footer span{
+    font-size: 2vmin;
 }
 
 footer #logo {
-  height: 4em;
-  width: 4em;
+  height: 6vmin;
+    width: 6vmin;
+}
+
+#whatsapp {
+  fill: #24C861;
+}
+
+#telegram {
+  fill: #21A1E1;
 }
 
 footer .icon:hover {
-  fill: rgba(252, 247, 248, 1);
-  transition-duration: 0.5s;
+  fill: map-get($theme-colors, "info") !important;
+}
+
+
+#b-icon {
+  height: 1.5em !important;
+  width: 1.5em !important;
+  min-width: 0px;
+  min-height: 0px;
 }
 
 .navbar-icon {
@@ -136,7 +160,11 @@ footer .icon:hover {
 
 .navbar-number {
   font-family: 'Jura', sans-serif;
-  font-size: 2.3vmax;
+  font-size: 2vmax;
+
+    @include media-breakpoint-up(sm) {
+    font-size: 2.3vmin;
+  }
 
   @include media-breakpoint-up(lg) {
     font-size: 2.5vmin;
@@ -151,11 +179,6 @@ footer .icon:hover {
 .navbar-number .icon {
   height: 1em;
   width: 1em;
-}
-
-#b-icon {
-  height: 1.5em;
-  width: 1.5em;
 }
 
 .low-shadow {
@@ -309,12 +332,14 @@ $n-scaleZ: calc(1 + (($n-translateZ * -1) / $perspective));
 
 #navbar-aos {
   opacity: 0;
+  pointer-events: none;
   transition: opacity 0.1s linear,
   // transform: translateZ($n-translateZ) translateY(20px) scale($n-scaleZ);
 }
 
 #navbar-aos.target-is-active {
   opacity: 1;
+  pointer-events: auto;
   transition: 1s;
 }
 
@@ -465,8 +490,8 @@ $dur: 25s;
   }
 }
 
-.overflow-hidden-sm {
-  @include media-breakpoint-down(sm) {
+.overflow-hidden-lg {
+  @include media-breakpoint-down(lg) {
       overflow: hidden;
   }
 }
@@ -526,4 +551,19 @@ $dur: 25s;
 /* bottom line goes back to initial position and rotates back to 0 degrees */
 .navbar-toggler span:nth-child(3) {
     transform: translate(0%, 0%) rotate(0deg) ;
+}
+
+.navbar-collapse:not(.show):not(.collapsing) {
+  font-size: 1.1vmax;
+}
+
+.navbar-collapse.show .nav-div, .navbar-collapse.collapsing  .nav-div{
+  display: inline;
+  padding: 8px;
+  border-radius: 5px;
+  background-color: rgba(map-get($theme-colors, "light"), 1);
+}
+
+.nav-div:hover svg{
+  fill: map-get($theme-colors, "info") !important;
 }
