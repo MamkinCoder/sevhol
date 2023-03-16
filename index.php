@@ -69,7 +69,7 @@
                     <div class="container">
                     <div class="d-flex align-items-center">
                          <a class="d-flex navbar-brand align-items-center opacity-75" href="/">
-                              <img src="img/logo.svg" class="navbar-icon me-2" alt="logo">
+                              <img src="img/logo.gif" class="navbar-icon me-2" alt="logo">
                               <span class="lh-1">СевХол<br>Сервис</span>
                          </a>
                          <div class="navbar-number">
@@ -110,7 +110,7 @@
      <nav id="navbar-aos" class="navbar navbar-expand-lg align-items-center sticky-top bg-light navbar-light">
           <div class="container">
                <a href="/" class="d-flex align-items-center navbar-brand">
-                    <img src="img/logo.svg" class="icon me-2" alt="logo">
+                    <img src="img/logo.gif" class="icon me-2" alt="logo">
                     <span class="fs-4">СевХолСервис</span>
                </a>
                <button class="navbar-toggler collapsed me-4" type="button" data-bs-toggle="collapse" data-bs-target="#collapsingNavbar" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -206,7 +206,7 @@
                          <div class="card-body p-5 position-relative">
                                <figure id="brothers-aos" class="ms-5 w-50 float-end ">
                                    <div class="position-relative">
-                                        <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
+                                        <img src="img/brothers_bg.gif" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
                                         <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
                                         <img src="img/invisible.png" class="img-fluid" alt="работяги">
                                    </div>
@@ -231,7 +231,7 @@
                               <h1 class="display-4 p-2 text-center fw-bold">О нас</h1>
                               <figure class="w-100 float-end ">
                                    <div class="position-relative">
-                                        <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
+                                        <img src="img/brothers_bg.gif" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
                                         <img src="img/brothers.png" class="img-fluid position-absolute" alt="работяги">
                                         <img src="img/invisible.png" class="img-fluid" alt="работяги">
                                    </div>
@@ -402,7 +402,7 @@
           <div class="d-flex justify-content-around align-items-center">
           <div class="d-flex align-items-center">
                <a href="/" class="">
-                    <img src="img/logo.svg" class="icon" id="logo" alt="logo">
+                    <img src="img/logo.gif" class="icon" alt="logo">
                </a>
                <span class="ms-2">
                     © 2023 год "СевХолСервис" <br> powered by

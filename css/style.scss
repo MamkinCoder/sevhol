@@ -110,7 +110,7 @@ footer {
 }
 
 footer .icon{
-    height: 6vmin;
+    // height: 6vmin;
     width: 6vmin;
     max-width: 62px;
     max-height: 62px;
@@ -124,8 +124,8 @@ footer span{
 }
 
 footer #logo {
-  height: 6vmin;
-    width: 6vmin;
+  max-height: 6vmin;
+  max-width: 6vmin;
 }
 
 #whatsapp {
@@ -150,7 +150,7 @@ footer .icon:hover {
 
 .navbar-icon {
   height: 8vmin;
-  width: 8vmin;
+  // width: 8vmin;
 }
 
 .navbar-icon + span {
@@ -172,8 +172,8 @@ footer .icon:hover {
 }
 
 .icon {
-  height: 1.5em;
-  width: 1.5em;
+  max-height: 1.5em;
+  max-width: 1.5em;
 }
 
 .navbar-number .icon {
