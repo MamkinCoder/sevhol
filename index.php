@@ -153,12 +153,12 @@
                                         <div class="card-body">
                                              <label for="name" class="form-label">Как к Вам обращаться:</label>
                                              <div class="input-group mb-3">
-                                                  <input type="text" autocomplete="name" placeholder="Николай Николаевич" id="name" aria-label="Name" class="form-control" required>
+                                                  <input type="text" autocomplete="name" placeholder="Николай Николаевич" name="name" id="name" aria-label="Name" class="form-control" required>
                                              </div>
                                              <label for="tel" class="form-label">Ваш номер телефона:</label>
                                              <div class="input-group mb-3">
                                                   <span class="input-group-text" id="basic-addon1">+7</span>
-                                                  <input class="formatted-phoneCard form-control" placeholder="123 456 78 90" type="tel" id="tel" required>
+                                                  <input class="formatted-phoneCard form-control" placeholder="123 456 78 90" name="tel" type="tel" id="tel" required>
                                              </div>
                                              <label class="form-label">Способ связи:</label>
                                              <div class="mb-3">
@@ -186,7 +186,7 @@
                                         </div>
                                         <div class="card-footer">
                                              <div class=" d-flex flex-sm-row align-content-end">
-                                                  <small class = "quet">Нажимая “Отправить”, Вы соглашаетесь с <a href="url">политикой обработки персональных данных</a>.</small>
+                                                  <small class = "quet">Нажимая “Отправить”, Вы соглашаетесь с <a data-bs-toggle="modal" data-bs-target="#policyModal" href="#">политикой обработки персональных данных</a>.</small>
                                                   <button type="submit" class="btn btn-primary">Отправить</button>
                                              </div>
                                         </div>
@@ -203,7 +203,7 @@
                <div class="position-relative row g-0">
                     <div class="rounded cardblur d-none d-lg-block"></div>
                     <div class="card text-dark">
-                         <div class="card-body p-5">
+                         <div class="card-body p-5 position-relative">
                                <figure id="brothers-aos" class="ms-5 w-50 float-end ">
                                    <div class="position-relative">
                                         <img src="img/brothers_bg.jpg" class="img-fluid opacity-25 position-absolute rounded" alt="работяги">
@@ -213,6 +213,12 @@
                               </figure>
                               <h1 class="display-4 fw-bold">О нас</h1>
                               <p class="fs-4">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
+                              <hr>
+                              <div class="d-flex justify-content-between">
+                                   <p class="fs-5">Позвоните нам, и мы ответим на все ваши вопросы!</p> <a href="tel:+79785046000"><button class="text-nowrap btn btn-primary btn-lg"><svg class="icon me-2">
+                                        <use xlink:href="#phone"></use>
+                                   </svg>+7 (978) 504-60-00</button></a>
+                              </div>
                          </div>
                     </div>
                </div>
@@ -231,6 +237,12 @@
                                    </div>
                               </figure>
                               <p class=" p-2 fs-5">Мы мастера по ремонту бытовых  и промышленных холодильников. Исправляем поломки любой степени сложности, для нас нет невозможных ремонтов. Приедем в  удобное для вас время. У каждого из нас есть все необходимые для ремонта инструменты и запчасти. Мы уже <strong>более десяти лет</strong> предоставляем услуги по ремонту бытовой техники. Работаем в <em>Севастополе, Симферополе, Ялте, Евпатории</em> и пригородах.</p>
+                              <hr>
+                              <div class="d-sm-flex p-2 justify-content-between">
+                                   <p class="fs-5">Позвоните нам, и мы ответим на все ваши вопросы!</p> <a href="tel:+79785046000"><button class="text-nowrap btn btn-primary btn-lg"><svg class="icon me-2">
+                                        <use xlink:href="#phone"></use>
+                                   </svg>+7 (978) 504-60-00</button></a>
+                              </div>
                          </div>
                     </div>
                </div>
@@ -449,12 +461,12 @@
                     <div class="modal-body">
                          <label for="name2" class="form-label">Как к Вам обращаться:</label>
                          <div class="input-group mb-3">
-                              <input type="text" autocomplete="name" placeholder="Николай Николаевич" id="name2" aria-label="Name" class="form-control" required>
+                              <input type="text" autocomplete="name" placeholder="Николай Николаевич" id="name2" aria-label="Name" name="name" class="form-control" required>
                          </div>
                          <label for="tel2" class="form-label">Ваш номер телефона:</label>
                          <div class="input-group mb-3">
                               <span class="input-group-text" id="basic-addon1">+7</span>
-                              <input class="formatted-phone" placeholder="123 456 78 90" type="tel" id="tel2" >
+                              <input class="formatted-phone" placeholder="123 456 78 90" type="tel" name="tel" id="tel2" >
                          </div>
                          <label class="form-label">Способ связи:</label>
                          <div class="mb-3 position-relative">
@@ -482,7 +494,7 @@
                     </div>
                     <div class="modal-footer">
                          <div class=" d-flex flex-sm-row align-content-end">
-                              <small class = "quet">Нажимая “Отправить”, Вы соглашаетесь с <a href="url">политикой обработки персональных данных</a>.</small>
+                              <small class = "quet">Нажимая “Отправить”, Вы соглашаетесь с <a data-bs-toggle="modal" data-bs-target="#policyModal" href="#">политикой обработки персональных данных</a>.</small>
                               <button type="submit" class="btn btn-primary">Отправить</button>
                          </div>
                     </div>
@@ -687,6 +699,33 @@
   </div>
 </div>
 
+<div class="modal fade" id="policyModal" tabindex="1" aria-labelledby="policyModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Политика в отношении обработки персональных данных</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+               <?php readfile("policy.html");?>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container position-fixed bottom-0 end-0 p-3">
+  <div id="liveToast" class="toast align-items-center text-dark" role="alert" aria-live="assertive" aria-atomic="true">
+       <div class="d-flex">
+            <div class="toast-body" id="toastMessage">
+                 Hello, world! This is a toast message.
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+       </div>
+  </div>
+</div>
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 <?php
@@ -701,8 +740,9 @@
           $email = $_POST['email'];
           $message = urlencode($name."\n+7 ".$tel."\n".$contact."\n".$email);
           $bot_response = @file_get_contents($url."sendmessage?text=".$message."&chat_id=".$chat_id."&parse_mode=HTML");
+          echo $bot_response;
           $toast_msg = "Спасибо! В ближайшее время мы с Вами свяжемся.";
-          if ($bot_response ===false) {
+          if ($bot_response === false) {
                $toast_msg = "Ошибка сервера. Извините, в данный момент мы не можем Вам позвонить.";
                echo "<script type=\"text/javascript\">
                toastErrorColorChange();

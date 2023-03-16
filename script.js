@@ -90,7 +90,7 @@ var footer = function(entries, observer) {
         if (entry.isIntersecting) {
             document.querySelector(".callme").classList.remove(targetActiveClass)
         } else {
-            // document.querySelector(".callme").classList.add(targetActiveClass)
+            document.querySelector(".callme").classList.add(targetActiveClass)
         }
     })
 };
