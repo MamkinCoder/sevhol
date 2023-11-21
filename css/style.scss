@@ -1,13 +1,12 @@
 $theme-colors: (
-  "primary": #30A4EC,
-  "secondary":  #272727,
-  "light": #F9FDEB,
+  "primary": #30a4ec,
+  "secondary": #272727,
+  "light": #f9fdeb,
   "dark": #160c28,
-  "success":    #34e8ff,
-  "info":       #e8bad7,
-  "warning":    #9F94AA,
+  "success": #34e8ff,
+  "info": #e8bad7,
+  "warning": #9f94aa,
   // "danger":     $danger,
-
 );
 
 $position-values: (
@@ -20,21 +19,17 @@ $position-values: (
   50: 50%,
   60: 60%,
   80: 80%,
-  100: 100%
+  100: 100%,
 );
 
-
-
-
 // #e8bad7 #272727 #34e8ff #f4ffff #efecca #78c0e0 #2660a4 #160c28 #c2c2c2 #30A4EC
-
 
 $form-check-input-checked-color: map-get($theme-colors, "light");
 $form-check-input-checked-bg-color: map-get($theme-colors, "secondary");
 
-$list-group-bg: rgba(map-get($theme-colors, "dark"), 0.0);
+$list-group-bg: rgba(map-get($theme-colors, "dark"), 0);
 
-$list-group-border-color:           rgba(black, .250);
+$list-group-border-color: rgba(black, 0.25);
 
 $card-bg: rgba(map-get($theme-colors, "light"), 0.2);
 
@@ -44,83 +39,98 @@ $navbar-light-disabled-color: rgba(map-get($theme-colors, "dark"), 1);
 $navbar-light-color: rgba(map-get($theme-colors, "dark"), 1);
 $navbar-light-hover-color: rgba(map-get($theme-colors, "primary"), 1);
 
-
 $modal-content-bg: map-get($theme-colors, "light");
 // $modal-content-color:  map-get($theme-colors, "secondary");
 
 @import "../node_modules/bootstrap/scss/functions";
 @import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/utilities";
 
-$utilities:
-  (
-       "min-viewport-height": (
-      property: min-height,
-      class: min-vh,
-      values: (100: 100vh, 90: 90vh, 80: 80vh, 75: 75vh, 70: 70vh, 65: 65vh, 60: 60vh, 50: 50vh, 45: 45vh, 40: 40vh, 30: 30vh, 25: 25vh, 20: 20vh)
+$utilities: (
+  "min-viewport-height": (
+    property: min-height,
+    class: min-vh,
+    values: (
+      100: 100vh,
+      90: 90vh,
+      80: 80vh,
+      75: 75vh,
+      70: 70vh,
+      65: 65vh,
+      60: 60vh,
+      50: 50vh,
+      45: 45vh,
+      40: 40vh,
+      30: 30vh,
+      25: 25vh,
+      20: 20vh,
     ),
+  ),
 
-      "font-size": (
-      rfs: true,
-      property: font-size,
-      class: fs,
-      values: $font-sizes,
-      responsive: true
-    ),
+  "font-size": (
+    rfs: true,
+    property: font-size,
+    class: fs,
+    values: $font-sizes,
+    responsive: true,
+  ),
 
-      "position": (
-      property: position,
-      values: static relative absolute fixed sticky,
-      responsive: true
-    ),
+  "position": (
+    property: position,
+    values: static relative absolute fixed sticky,
+    responsive: true,
+  ),
 );
 
-.card .icon{
-    height: 1.5em;
-    width: 1.5em;
-    fill: map-get($theme-colors, "dark");
+.card .icon {
+  height: 1.5em;
+  width: 1.5em;
+  fill: map-get($theme-colors, "dark");
 }
 
-
-.card-body li{
+.card-body li {
   color: map-get($theme-colors, "dark");
 }
 
 @import "../node_modules/bootstrap/scss/bootstrap";
 
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Ubuntu', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   // -webkit-text-stroke: 0.03em map-get($theme-colors, "light");
 }
 
 body {
-    background-color: map-get($theme-colors, "light");
-    // color: map-get($theme-colors, "dark");
-    // font-family: 'Russo One', sans-serif;
-    font-family: 'Ubuntu', sans-serif;
-    font-weight: 400;
+  background-color: map-get($theme-colors, "light");
+  // color: map-get($theme-colors, "dark");
+  // font-family: 'Russo One', sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
 }
-
 
 footer {
-    color: map-get($theme-colors, "light");
+  color: map-get($theme-colors, "light");
 }
 
-footer .icon{
-    // height: 6vmin;
-    width: 6vmin;
-    max-width: 62px;
-    max-height: 62px;
-    min-width: 30px;
-    min-height: 30px;
-    fill: map-get($theme-colors, "dark");
+footer .icon {
+  // height: 6vmin;
+  width: 6vmin;
+  max-width: 62px;
+  max-height: 62px;
+  min-width: 30px;
+  min-height: 30px;
+  fill: map-get($theme-colors, "dark");
 }
 
-footer span{
-    font-size: 2vmin;
+footer span {
+  font-size: 2vmin;
 }
 
 footer #logo {
@@ -129,17 +139,16 @@ footer #logo {
 }
 
 #whatsapp {
-  fill: #24C861;
+  fill: #24c861;
 }
 
 #telegram {
-  fill: #21A1E1;
+  fill: #21a1e1;
 }
 
 footer .icon:hover {
   fill: map-get($theme-colors, "info") !important;
 }
-
 
 #b-icon {
   height: 1.5em !important;
@@ -159,10 +168,10 @@ footer .icon:hover {
 }
 
 .navbar-number {
-  font-family: 'Jura', sans-serif;
+  font-family: "Jura", sans-serif;
   font-size: 2vmax;
 
-    @include media-breakpoint-up(sm) {
+  @include media-breakpoint-up(sm) {
     font-size: 2.3vmin;
   }
 
@@ -186,8 +195,9 @@ footer .icon:hover {
 }
 
 .all-shadow {
-    box-shadow: inset 0 -15px 15px -5px rgba(0, 0, 0, 0.5), inset 0 15px 15px -5px rgba(0, 0, 0, 0.5),;
-    position: relative;
+  box-shadow: inset 0 -15px 15px -5px rgba(0, 0, 0, 0.5),
+    inset 0 15px 15px -5px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 .all-shadow img {
@@ -196,7 +206,6 @@ footer .icon:hover {
   z-index: -1;
 }
 
-
 .quet {
   display: block;
   line-height: 1.2;
@@ -204,9 +213,8 @@ footer .icon:hover {
 }
 
 .navbar-brand {
-  font-family: 'Jura', sans-serif;
+  font-family: "Jura", sans-serif;
 }
-
 
 $translateZ: -40px;
 
@@ -217,13 +225,11 @@ $scaleX: calc(1 + (($translateZ * -1) / $perspective));
 $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
 // $scaleZ: calc($perspective / ($perspective + $translateZ) + 0.05);
 
-
 .parallax_wrapper {
   height: 100vh;
   overflow-y: auto;
   overflow-x: hidden;
   transform-style: flat;
-  // display: flow-root;
   z-index: 0;
   perspective: $perspective;
   background-image: url(../img/banner.jpg), url(../img/banner-r.jpg);
@@ -231,26 +237,19 @@ $scaleY: calc(1 + ((($translateZ * -1) / $perspective) / 2));
   background-repeat: no-repeat, repeat, no-repeat;
   background-position: top 0% right 80%, top 0% right 80%;
   background-size: contain, contain;
-  // transition: background-image 1s;
-  // animation: changeBg 1s reverse;
-  @include media-breakpoint-up(lg) {
-    // perspective: $perspective;
-  }
 }
 
 .parallax_wrapper.target-is-active {
   background-image: url(../img/banner-bg.jpg), url(../img/banner-r-bg.jpg);
-  // background-attachment: fixed, auto;
-  // background-repeat: no-repeat, repeat, no-repeat;
-  // background-position: top 0% right 80%, top 0% right 0%;
-  // background-size: contain, contain;
-  transition: background-image 1s;
-  // animation: changeBg 1s forwards;
 }
 
-@keyframes changeBg{
-   from {background-image: url(../img/banner.jpg);}
-   to {background-image: url(../img/banner-bg.jpg);}
+@keyframes changeBg {
+  from {
+    background-image: url(../img/banner.jpg);
+  }
+  to {
+    background-image: url(../img/banner-bg.jpg);
+  }
 }
 
 .bgblur {
@@ -333,7 +332,7 @@ $n-scaleZ: calc(1 + (($n-translateZ * -1) / $perspective));
 #navbar-aos {
   opacity: 0;
   pointer-events: none;
-  transition: opacity 0.1s linear,
+  transition: opacity 0.1s linear;
   // transform: translateZ($n-translateZ) translateY(20px) scale($n-scaleZ);
 }
 
@@ -347,33 +346,33 @@ $n-scaleZ: calc(1 + (($n-translateZ * -1) / $perspective));
   transform-origin: center left;
   transform: translate3d(200px, 0px, 5px);
   opacity: 0;
-  transition: 0.3s linear,
+  transition: 0.3s linear;
   // transform: translateZ($n-translateZ) translateY(20px) scale($n-scaleZ);
 }
 
 #we.target-is-active {
   transform: translate3d(-10px, 0px, 5px);
   opacity: 1;
-  transition: 1s cubic-bezier(.69,.46,.56,1.42);
+  transition: 1s cubic-bezier(0.69, 0.46, 0.56, 1.42);
 }
 
 #price {
   transform-origin: center right;
   transform: translate3d(-200px, 0px, 5px);
   opacity: 0;
-  transition: 0.3s linear,
+  transition: 0.3s linear;
   // transform: translateZ($n-translateZ) translateY(20px) scale($n-scaleZ);
 }
 
 #price.target-is-active {
   transform: translate3d(10px, 0px, 5px);
   opacity: 1;
-  transition: 1s cubic-bezier(.69,.46,.56,1.42);
+  transition: 1s cubic-bezier(0.69, 0.46, 0.56, 1.42);
 }
 
 .aos {
   opacity: 0;
-  transition: opacity .5s linear,
+  transition: opacity 0.5s linear;
 }
 
 /* Apply this class when #target enters/leaves the viewport */
@@ -381,7 +380,6 @@ $n-scaleZ: calc(1 + (($n-translateZ * -1) / $perspective));
 .aos.target-is-active {
   opacity: 1;
 }
-
 
 //marquee
 
@@ -406,15 +404,13 @@ $dur: 15s;
 }
 
 @keyframes marquee {
-   0% {
+  0% {
     transform: translateX(50%);
   }
   100% {
     transform: translateX(-150%);
   }
 }
-
-
 
 $far: 1;
 $near: 0.05;
@@ -425,7 +421,20 @@ $near: 0.05;
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to right, rgba(map-get($theme-colors, "primary"), $far) 0%, rgba(map-get($theme-colors, "success"), $near) 10%, rgba(map-get($theme-colors, "success"), $near) 90%, rgba(map-get($theme-colors, "primary"), $far) 100%), linear-gradient(to bottom, rgba(map-get($theme-colors, "primary"), $far) 0%, rgba(map-get($theme-colors, "success"), $near) 10%, rgba(map-get($theme-colors, "success"), $near) 90%, rgba(map-get($theme-colors, "primary"), $far) 100%);
+  background: linear-gradient(
+      to right,
+      rgba(map-get($theme-colors, "primary"), $far) 0%,
+      rgba(map-get($theme-colors, "success"), $near) 10%,
+      rgba(map-get($theme-colors, "success"), $near) 90%,
+      rgba(map-get($theme-colors, "primary"), $far) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(map-get($theme-colors, "primary"), $far) 0%,
+      rgba(map-get($theme-colors, "success"), $near) 10%,
+      rgba(map-get($theme-colors, "success"), $near) 90%,
+      rgba(map-get($theme-colors, "primary"), $far) 100%
+    );
 
   // transform: translateZ(1px);
 }
@@ -450,7 +459,6 @@ $dur: 25s;
   transform: translateX(100%);
   animation: marqueeL $dur calc($dur/2) linear infinite;
 }
-
 
 .marqueeR {
   width: 100%;
@@ -483,39 +491,37 @@ $dur: 25s;
 
 @keyframes fade-in {
   from {
-      transform: translate3d(550px, -500px, 5px);
+    transform: translate3d(550px, -500px, 5px);
   }
   to {
-      transform: translate3d(-150px, -500px, 5px);
+    transform: translate3d(-150px, -500px, 5px);
   }
 }
 
 .overflow-hidden-lg {
   @include media-breakpoint-down(lg) {
-      overflow: hidden;
+    overflow: hidden;
   }
 }
 
-
 /* Define the shape and color of the hamburger lines */
 .navbar-toggler span {
-    display: block;
-    background-color: #4f4f4f;
-    height: 3px;
-    width: 25px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    position: relative;
-    left: 0;
-    opacity: 1;
-    transition: all 0.35s ease-out;
-    transform-origin: center left;
+  display: block;
+  background-color: #4f4f4f;
+  height: 3px;
+  width: 25px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  left: 0;
+  opacity: 1;
+  transition: all 0.35s ease-out;
+  transform-origin: center left;
 }
-
 
 /* top line needs a little padding */
 .navbar-toggler span:nth-child(1) {
-    margin-top: 0.3em;
+  margin-top: 0.3em;
 }
 
 /**
@@ -524,17 +530,16 @@ $dur: 25s;
 
 /* top line rotates 45 degrees clockwise and moves up and in a bit to close the center of the X in the center of the button */
 .navbar-toggler:not(.collapsed) span:nth-child(1) {
-    transform: translate(15%, -33%) rotate(45deg);
+  transform: translate(15%, -33%) rotate(45deg);
 }
 /* center line goes transparent */
 .navbar-toggler:not(.collapsed) span:nth-child(2) {
-    opacity: 0;
+  opacity: 0;
 }
 /* bottom line rotates 45 degrees counter clockwise, in, and down a bit to close the center of the X in the center of the button  */
 .navbar-toggler:not(.collapsed) span:nth-child(3) {
-    transform: translate(15%, 33%) rotate(-45deg) ;
+  transform: translate(15%, 33%) rotate(-45deg);
 }
-
 
 /**
  * Animate collapse open into hamburger menu
@@ -542,28 +547,29 @@ $dur: 25s;
 
 /* top line moves back to initial position and rotates back to 0 degrees */
 .navbar-toggler span:nth-child(1) {
-    transform: translate(0%, 0%) rotate(0deg) ;
+  transform: translate(0%, 0%) rotate(0deg);
 }
 /* middle line goes back to regular color and opacity */
 .navbar-toggler span:nth-child(2) {
-    opacity: 1;
+  opacity: 1;
 }
 /* bottom line goes back to initial position and rotates back to 0 degrees */
 .navbar-toggler span:nth-child(3) {
-    transform: translate(0%, 0%) rotate(0deg) ;
+  transform: translate(0%, 0%) rotate(0deg);
 }
 
 .navbar-collapse:not(.show):not(.collapsing) {
   font-size: 1.1vmax;
 }
 
-.navbar-collapse.show .nav-div, .navbar-collapse.collapsing  .nav-div{
+.navbar-collapse.show .nav-div,
+.navbar-collapse.collapsing .nav-div {
   display: inline;
   padding: 8px;
   border-radius: 5px;
   background-color: rgba(map-get($theme-colors, "light"), 1);
 }
 
-.nav-div:hover svg{
+.nav-div:hover svg {
   fill: map-get($theme-colors, "info") !important;
 }

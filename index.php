@@ -10,7 +10,6 @@
      <link href="https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Montserrat+Alternates:wght@500;700;900&family=Ubuntu:wght@300;400;700&display=swap" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="css/style.css">
      <link rel="stylesheet" type="text/css" href="css/callme.css">
-     <link rel="stylesheet" type="text/css" href="css/aurora-gradient.css">
      <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
      <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -19,15 +18,26 @@
      <script src="node_modules/cleave.js/dist/addons/cleave-phone.ru.js"></script>
      <script src="node_modules/canvas-confetti/dist/confetti.browser.js"></script>
      <?php
-     // Detect if user agent is a Chromium-based browser
-     $user_agent = $_SERVER['HTTP_USER_AGENT'];
-     $is_chrome = strpos($user_agent, 'Chromium') !== false || strpos($user_agent, 'Chrome') !== false;
+    // Retrieve the user agent string from the server variable
+    $userAgent = $_SERVER['HTTP_USER_AGENT'];
 
-     // Load CSS stylesheet if user is using Chromium-based browser
-     if ($is_chrome) {
-       echo '<link rel="stylesheet" type="text/css" href="css/chromium_styles.css">';
-     }
-     ?>
+    // Define a function to check if the user agent is Chromium-based
+    function isChromiumBased($userAgent) {
+        return strpos($userAgent, 'Chromium') !== false || strpos($userAgent, 'Chrome') !== false;
+    }
+
+    // Check if the browser is Chromium-based
+    $isChrome = isChromiumBased($userAgent);
+
+    // Output the user agent and detection result for testing purposes
+//     echo 'User Agent: ' . htmlspecialchars($userAgent) . '<br>';
+//     echo 'Is Chromium-Based: ' . ($isChrome ? 'Yes' : 'No') . '<br>';
+
+    // Load CSS stylesheet if the user is using a Chromium-based browser
+    if ($isChrome) {
+         echo '<link rel="stylesheet" type="text/css" href="css/chromium_styles.css">';
+    }
+?>
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
