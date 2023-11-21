@@ -1,0 +1,50 @@
+<section class="container position-relative py-5">
+  <div class="row g-0">
+    <div
+      class="col-md-6 d-flex align-items-center align-self-stretch position-relative"
+    >
+      <img
+        src="img/fridge.gif"
+        alt=""
+        class="d-md-block d-none"
+        style="
+          position: absolute;
+          width: 100%;
+          transform-origin: center left;
+          transform: translate3d(0px, 0px, -10px) scale3d(1, 1, 1);
+        "
+      />
+      <div
+        class="card text-center border-primary border border-5 rounded-5"
+        id="price"
+      >
+        <div class="cardblur d-none d-lg-block rounded-5"></div>
+        <h3 class="p-3 position-relative">
+          Ознакомьтесь с нашим прайс листом:
+        </h3>
+      </div>
+    </div>
+    <div class="col-md-4 p-5">
+      <div class="position-relative text-center">
+        <img src="img/clipboard_empty.png" alt="clipboard" class="w-100" />
+        <a
+          data-bs-toggle="modal"
+          data-bs-target="#priceModal"
+          class="link link-dark"
+          id="modal_link"
+          style="text-decoration: none"
+        >
+          <div class="clipboard"></div>
+          <h4
+            style="
+              transform: rotate3d(0, 1, 0, -1.5deg)
+                translate3d(20px, -20px, 4px);
+            "
+          >
+            Прайс-лист
+          </h4>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

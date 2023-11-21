@@ -6,3 +6,5 @@ chromium-animation.css
 callme.css
 configs/conf.ini
 Archive.zip
+.vscode/settings.json
+.php-cs-fixer.cache
